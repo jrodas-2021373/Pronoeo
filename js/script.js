@@ -82,4 +82,56 @@ if (btnQuoteWhatsApp) {
   });
 }
 
+// Sombra y estilo dinámico para la cabecera al hacer scroll
+const siteHeader = document.querySelector('.site-header');
+if (siteHeader) {
+  const handleScroll = () => {
+    if (window.scrollY > 20) {
+      siteHeader.classList.add('is-scrolled');
+    } else {
+      siteHeader.classList.remove('is-scrolled');
+    }
+  };
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+}
+
+// Botones interactivos para copiar NIT y dirección al portapapeles
+const copyButtons = document.querySelectorAll('.btn-copy');
+copyButtons.forEach((btn) => {
+  btn.addEventListener('click', async () => {
+    const textToCopy = btn.getAttribute('data-copy');
+    if (!textToCopy) return;
+
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+      const originalText = btn.textContent;
+      btn.textContent = '¡Copiado!';
+      btn.classList.add('is-copied');
+
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.classList.remove('is-copied');
+      }, 2000);
+    } catch (err) {
+      // Fallback para entornos donde clipboard API requiera permisos adicionales
+      const tempInput = document.createElement('input');
+      tempInput.value = textToCopy;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+
+      const originalText = btn.textContent;
+      btn.textContent = '¡Copiado!';
+      btn.classList.add('is-copied');
+
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.classList.remove('is-copied');
+      }, 2000);
+    }
+  });
+});
+
 
