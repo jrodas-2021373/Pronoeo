@@ -13,6 +13,13 @@ if (menuToggle && navPanel) {
       menuToggle.setAttribute('aria-expanded', 'false');
     });
   });
+
+  document.addEventListener('click', (e) => {
+    if (navPanel.classList.contains('is-open') && !navPanel.contains(e.target) && !menuToggle.contains(e.target)) {
+      navPanel.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
 }
 
 const revealElements = document.querySelectorAll('.reveal');
