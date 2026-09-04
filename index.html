@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css?v=4.3" />
   </head>
   <body>
     <div class="page-shell">
@@ -29,13 +29,19 @@
             <span class="brand-name">Pronoeo</span>
           </a>
 
-          <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Abrir menú de navegación"
+            aria-expanded="false"
+            aria-controls="nav-panel"
+          >
             <span></span>
             <span></span>
             <span></span>
           </button>
 
-          <div class="nav-panel">
+          <div class="nav-panel" id="nav-panel">
             <div class="nav-links">
               <a href="#about">Nosotros</a>
               <a href="#services">Servicios</a>
@@ -52,42 +58,33 @@
       </header>
 
       <main id="top">
-        <section class="hero">
-          <div class="hero-bg" aria-hidden="true">
-            <div class="grid-glow"></div>
-            <div class="orb orb-one"></div>
-            <div class="orb orb-two"></div>
-            <div class="route-line route-one"></div>
-            <div class="route-line route-two"></div>
+        <section class="hero hero-video-cinematic">
+          <div class="hero-video-container" aria-hidden="true">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              poster="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80"
+              class="hero-video-bg"
+            >
+              <source src="./video/highway-truck-hd.mp4" type="video/mp4" />
+            </video>
+            <div class="hero-video-scrim"></div>
           </div>
 
-          <div class="container hero-grid">
-            <div class="hero-copy reveal">
-              <p class="eyebrow">Transporte pesado · Logística · Aduanas · Guatemala</p>
+          <div class="container hero-clean-wrap">
+            <div class="hero-copy-clean">
+              <p class="eyebrow eyebrow-glass">Transporte pesado · Logística · Aduanas · Guatemala</p>
               <h1>Movemos la logística que mantiene a tu operación en marcha.</h1>
-              <p class="lead">
-                En <strong>Grupo Pronoeo</strong> anticipamos y resolvemos las necesidades de transporte de carga pesada, logística y gestión aduanal para empresas que exigen puntualidad, seguridad y trazabilidad en cada entrega.
+              <p class="lead lead-white">
+                Transporte de carga pesada, logística y gestión aduanal con puntualidad y trazabilidad en toda Guatemala.
               </p>
 
               <div class="cta-row">
                 <a class="btn btn-primary" href="#contact">Solicita una cotización</a>
-                <a class="btn btn-secondary" href="#services">Ver servicios</a>
-              </div>
-
-              <ul class="hero-points">
-                <li>Más de 14 años de trayectoria sólida en Guatemala (Fundada en febrero de 2012)</li>
-                <li>Operación con cabezales pesados, camiones y furgones con pilotos profesionales</li>
-                <li>Cobertura en toda Guatemala: rutas interdepartamentales, corredores industriales y puertos</li>
-              </ul>
-            </div>
-
-            <div class="hero-visual reveal">
-              <div class="video-card">
-                <video autoplay muted loop playsinline poster="./img/Pronoeo%20logo.png">
-                  <source src="./video/pronoeo-video.mp4" type="video/mp4" />
-                </video>
-                <div class="video-overlay"></div>
-                <div class="video-tag">Grupo Pronoeo, S.A.</div>
+                <a class="btn btn-secondary-glass" href="#services">Ver servicios</a>
               </div>
             </div>
           </div>
