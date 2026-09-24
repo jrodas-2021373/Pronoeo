@@ -103,7 +103,7 @@ if (siteHeader) {
   handleScroll();
 }
 
-// Botones interactivos para copiar NIT y dirección al portapapeles
+// Botón interactivo para copiar dirección al portapapeles
 const copyButtons = document.querySelectorAll('.btn-copy');
 copyButtons.forEach((btn) => {
   btn.addEventListener('click', async () => {
@@ -140,5 +140,51 @@ copyButtons.forEach((btn) => {
     }
   });
 });
+
+// Filtro interactivo de catálogo de flota
+const fleetFilterBtns = document.querySelectorAll('.fleet-filter-btn');
+const fleetCards = document.querySelectorAll('.fleet-card[data-category]');
+
+if (fleetFilterBtns.length && fleetCards.length) {
+  fleetFilterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      fleetFilterBtns.forEach((b) => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+
+      const filterVal = btn.getAttribute('data-filter');
+      fleetCards.forEach((card) => {
+        const cardCat = card.getAttribute('data-category');
+        if (filterVal === 'all' || cardCat === filterVal) {
+          card.style.display = 'flex';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+// Botones "Cotizar este equipo" que seleccionan la unidad en el cotizador
+const quoteUnitBtns = document.querySelectorAll('.btn-card-quote');
+const quoteServiceSelect = document.getElementById('quote-service');
+
+if (quoteUnitBtns.length && quoteServiceSelect) {
+  quoteUnitBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const unit = btn.getAttribute('data-unit');
+      if (unit) {
+        for (let i = 0; i < quoteServiceSelect.options.length; i++) {
+          const opt = quoteServiceSelect.options[i];
+          if (opt.value === unit || opt.value.includes(unit) || opt.text.includes(unit)) {
+            quoteServiceSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    });
+  });
+}
 
 
