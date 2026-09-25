@@ -5,160 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="AFUSA - Soluciones logísticas y transporte internacional con operación segura, eficiente y conectada."
+      content="Grupo Pronoeo, S.A. - Operador logístico regional de transporte pesado, logística transfronteriza y trámites aduanales conectando México y toda Centroamérica hasta Panamá."
     />
-    <title>AFUSA | Transporte y logística con visión regional</title>
+    <title>Grupo Pronoeo | Transporte Pesado y Logística Regional · México a Panamá</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css?v=5.3" />
   </head>
   <body>
     <div class="page-shell">
       <header class="site-header">
         <nav class="nav container">
-          <a href="#top" class="brand" aria-label="AFUSA inicio">
-            <span class="brand-mark">AF</span>
-            <span class="brand-text">AFUSA</span>
+          <a href="#top" class="brand" aria-label="Pronoeo inicio">
+            <img
+              class="brand-logo"
+              src="./img/Pronoeo%20logo.png"
+              alt="Logo de Transportes Pronoeo"
+            />
+            <span class="brand-name">Pronoeo</span>
           </a>
 
-          <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Abrir menú de navegación"
+            aria-expanded="false"
+            aria-controls="nav-panel"
+          >
             <span></span>
             <span></span>
             <span></span>
           </button>
 
-          <div class="nav-panel">
+          <div class="nav-panel" id="nav-panel">
             <div class="nav-links">
               <a href="#about">Nosotros</a>
               <a href="#services">Servicios</a>
               <a href="#fleet">Flota</a>
               <a href="#coverage">Cobertura</a>
-              <a href="#contact">Contacto</a>
+              <a href="#sectors">Sectores</a>
             </div>
             <div class="nav-actions">
-              <a class="btn btn-ghost" href="#tracking">Seguimiento</a>
-              <a class="btn btn-primary" href="#contact">Cotiza</a>
+              <a class="btn btn-secondary" href="#contact">Contacto</a>
+              <a class="btn btn-primary" href="#contact">Cotizar</a>
             </div>
           </div>
         </nav>
       </header>
 
       <main id="top">
-        <section class="hero">
-          <div class="hero-bg" aria-hidden="true">
-            <div class="grid-glow"></div>
-            <div class="orb orb-one"></div>
-            <div class="orb orb-two"></div>
-            <div class="route-line route-one"></div>
-            <div class="route-line route-two"></div>
+        <section class="hero hero-video-cinematic">
+          <div class="hero-video-container" aria-hidden="true">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              poster="./img/terminal-logistica.jpg"
+              class="hero-video-bg"
+            >
+              <source src="./video/highway-truck-hd.mp4" type="video/mp4" />
+            </video>
+            <div class="hero-video-scrim"></div>
           </div>
 
-          <div class="container hero-grid">
-            <div class="hero-copy reveal">
-              <p class="eyebrow">Transporte terrestre · regional y internacional</p>
-              <h1>Movemos la carga que impulsa Centroamérica.</h1>
-              <p class="lead">
-                Soluciones logísticas con rigor operativo, trazabilidad y compromiso de servicio para clientes que necesitan velocidad, seguridad y previsibilidad.
+          <div class="container hero-clean-wrap">
+            <div class="hero-copy-clean">
+              <p class="eyebrow eyebrow-glass">Operador Logístico Regional · México hasta Panamá</p>
+              <h1>Movemos la logística que mantiene a tu operación en marcha.</h1>
+              <p class="lead lead-white">
+                Transporte de carga pesada, logística transfronteriza y gestión aduanal en el corredor completo desde México hasta Panamá.
               </p>
 
               <div class="cta-row">
                 <a class="btn btn-primary" href="#contact">Solicita una cotización</a>
-                <a class="btn btn-secondary" href="#services">Ver servicios</a>
-              </div>
-
-              <ul class="hero-points">
-                <li>Flota propia y operada por la empresa</li>
-                <li>Seguimiento y control de rutas en tiempo real</li>
-                <li>Atención regional en Guatemala, México y Centroamérica</li>
-              </ul>
-            </div>
-
-            <div class="hero-visual reveal">
-              <div class="showcase-card">
-                <div class="showcase-photo">
-                  <img
-                    src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80"
-                    alt="Camión de transporte de carga"
-                  />
-                  <div class="photo-badge">Regional · confiable · seguro</div>
-                </div>
-
-                <div class="showcase-copy">
-                  <span class="mini-label">Nuestra operación</span>
-                  <p>
-                    Soluciones de transporte y logística pensadas para mover mercancías con continuidad,
-                    previsibilidad y atención real.
-                  </p>
-                </div>
-
-                <div class="showcase-meta">
-                  <div>
-                    <span>Desde</span>
-                    <strong>2005</strong>
-                  </div>
-                  <div>
-                    <span>Rutas</span>
-                    <strong>Guatemala · México · Centroamérica</strong>
-                  </div>
-                </div>
+                <a class="btn btn-secondary-glass" href="#services">Ver servicios</a>
               </div>
             </div>
           </div>
         </section>
 
         <section id="about" class="about section-spacing">
-          <div class="container two-columns">
-            <div class="content-block reveal">
-              <p class="eyebrow eyebrow-dark">Sobre AFUSA</p>
-              <h2>Operación logística con disciplina, seguridad y visión de largo plazo.</h2>
-              <p>
-                AFUSA nace para resolver la logística de empresas que necesitan transporte confiable en condiciones exigentes, con atención personalizada y una operación enfocada en la continuidad de la cadena de suministro.
-              </p>
-              <p>
-                Hoy ejecutamos movimientos locales, interdepartamentales, internacionales y portuarios con una flota preparada para atender diversidad de cargas: contenedores, plataformas, furgones, cabezales y unidades especiales.
-              </p>
+          <div class="container">
+            <div class="about-top-grid">
+              <div class="about-story reveal">
+                <p class="eyebrow eyebrow-dark">Sobre Grupo Pronoeo</p>
+                <h2>Logística regional, transporte pesado y aduanas con disciplina operativa.</h2>
+                <p>
+                  Constituida en febrero de 2012, <strong>Grupo Pronoeo, S.A.</strong> nació con una premisa clara inspirada en la raíz de nuestro nombre (del griego <em>pronoéō</em>: <em>pensar de antemano y proveer con cuidado</em>): <strong>conocer, comprender y anticipar las necesidades de cada cliente</strong> para que su cadena de suministro jamás se detenga.
+                </p>
+                <p>
+                  Con más de 14 años de trayectoria, nos hemos consolidado como un enlace logístico regional clave desde México hasta Panamá. Contamos con nuestro centro operativo y predio principal en <strong>Mixco</strong> y oficinas comerciales en <strong>Zona 11 de la Ciudad de Guatemala</strong>, complementado con <strong>operación directa en Costa Rica</strong>, enlace comercial hacia <strong>Panamá</strong>, corredores transfronterizos activos para la recepción de <strong>carga desde México</strong> y entregas continuas en <strong>Honduras y El Salvador</strong>.
+                </p>
+              </div>
 
-              <div class="feature-list">
-                <div>
-                  <span class="feature-icon">01</span>
-                  <div>
-                    <h3>Seguridad como base</h3>
-                    <p>Procedimientos, mantenimiento y control operativo para cada viaje.</p>
-                  </div>
-                </div>
-                <div>
-                  <span class="feature-icon">02</span>
-                  <div>
-                    <h3>Calidad de servicio</h3>
-                    <p>Velocidad, puntualidad y comunicación continua con cada cliente.</p>
-                  </div>
-                </div>
-                <div>
-                  <span class="feature-icon">03</span>
-                  <div>
-                    <h3>Mejora continua</h3>
-                    <p>Enfoque en confiabilidad, eficiencia y reducción de riesgos operativos.</p>
-                  </div>
+              <div class="about-visual reveal">
+                <div class="about-image-frame">
+                  <img
+                    src="./img/terminal-logistica.jpg"
+                    alt="Centro de distribución, patio de maniobras y operaciones logísticas regionales de Grupo Pronoeo"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
 
-            <div class="image-stack reveal">
-              <div class="image-card large-card">
-                <img
-                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80"
-                  alt="Camiones en operación"
-                />
+            <div class="about-pillars-grid reveal">
+              <div class="pillar-card">
+                <span class="pillar-icon">01</span>
+                <div>
+                  <h3>Anticipación y aduanas regionales</h3>
+                  <p>Coordinación integral de tránsitos internacionales (DUCA-T), regímenes fiscales y liberación ágil en puertos y fronteras.</p>
+                </div>
               </div>
-              <div class="image-card small-card">
-                <img
-                  src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80"
-                  alt="Inventario de transporte"
-                />
+
+              <div class="pillar-card">
+                <span class="pillar-icon">02</span>
+                <div>
+                  <h3>Pilotos calificados en ruta internacional</h3>
+                  <p>Operadores de cabezal y transporte pesado con certificaciones, amplia experiencia en cruces fronterizos y seguridad vial.</p>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <span class="pillar-icon">03</span>
+                <div>
+                  <h3>Continuidad y trazabilidad satelital</h3>
+                  <p>Monitoreo satelital permanente y custodia logística para mantener activa y segura tu cadena de suministro transfronteriza.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -168,44 +151,78 @@
           <div class="container">
             <div class="section-heading reveal">
               <p class="eyebrow eyebrow-dark">Nuestros servicios</p>
-              <h2>Soluciones diseñadas para la carga que no admite improvisación.</h2>
+              <h2>Soluciones integrales de transporte y logística regional.</h2>
             </div>
 
             <div class="service-grid">
               <article class="service-card reveal">
-                <div class="service-icon">L</div>
-                <h3>Movimiento local</h3>
-                <p>Traslados interdepartamentales y servicios de distribución con tiempos ajustados y control operativo constante.</p>
+                <div class="service-icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="1" y="3" width="15" height="13"/>
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 8"/>
+                    <circle cx="5.5" cy="18.5" r="2.5"/>
+                    <circle cx="18.5" cy="18.5" r="2.5"/>
+                  </svg>
+                </div>
+                <h3>Transporte internacional y transfronterizo</h3>
+                <p>Arrastre y fletes de carga pesada en corredores centroamericanos y frontera con México con unidades autorizadas y pólizas de seguro.</p>
               </article>
 
               <article class="service-card reveal">
-                <div class="service-icon">I</div>
-                <h3>Tránsito internacional</h3>
-                <p>Operaciones desde Ciudad Hidalgo hasta la zona de Centroamérica con cumplimiento documental y seguridad.</p>
+                <div class="service-icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                    <line x1="12" y1="22.08" x2="12" y2="12"/>
+                  </svg>
+                </div>
+                <h3>Carga desde México (Frontera Sur)</h3>
+                <p>Recepción, custodia, transbordo y consolidación de mercancías en aduanas fronterizas Tecún Umán / Ciudad Hidalgo y Talismán.</p>
               </article>
 
               <article class="service-card reveal">
-                <div class="service-icon">P</div>
-                <h3>Operaciones portuarias</h3>
-                <p>Cargas directas e indirectas con coordinación logística para entornos portuarios y terminales.</p>
+                <div class="service-icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <h3>Entregas a El Salvador y Honduras</h3>
+                <p>Rutas directas y tránsitos ágiles puerta a puerta hacia San Salvador, San Pedro Sula, Tegucigalpa, zonas francas e industrias.</p>
               </article>
 
               <article class="service-card reveal">
-                <div class="service-icon">F</div>
-                <h3>Furgones y contenedores</h3>
-                <p>Soluciones para carga general, carga consolidada y movimiento de contenedores con trazabilidad.</p>
+                <div class="service-icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                  </svg>
+                </div>
+                <h3>Operación logística en Costa Rica y Panamá</h3>
+                <p>Presencia operativa y coordinación directa para almacenaje, enlace interregional y distribución en los mercados de Costa Rica y Panamá.</p>
               </article>
 
               <article class="service-card reveal">
-                <div class="service-icon">M</div>
-                <h3>Mantenimiento y confiabilidad</h3>
-                <p>Inspecciones, mantenimiento documentado y programación preventiva para proteger cada activo.</p>
+                <div class="service-icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="m9 12 2 2 4-4"/>
+                  </svg>
+                </div>
+                <h3>Gestión y trámites aduanales (DUCA-T)</h3>
+                <p>Asesoría y tramitación aduanal especializada, declaraciones de tránsito internacional, regímenes fiscales y liberación en fronteras y puertos.</p>
               </article>
 
               <article class="service-card reveal">
-                <div class="service-icon">T</div>
-                <h3>Seguimiento GPS</h3>
-                <p>Visibilidad en ruta para monitorear entregas, retrasos y condiciones del transporte en tiempo real.</p>
+                <div class="service-icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="5" r="3"/>
+                    <line x1="12" y1="22" x2="12" y2="8"/>
+                    <path d="M5 12H2a10 10 0 0 0 20 0h-3"/>
+                  </svg>
+                </div>
+                <h3>Operaciones portuarias y multimodal</h3>
+                <p>Maniobras y arrastre de contenedores en Puerto Quetzal, Santo Tomás de Castilla y Puerto Barrios, enlazando con furgones y plataformas.</p>
               </article>
             </div>
           </div>
@@ -214,38 +231,473 @@
         <section id="fleet" class="fleet section-spacing">
           <div class="container">
             <div class="section-heading reveal">
-              <p class="eyebrow eyebrow-dark">Nuestra flota</p>
-              <h2>Un parque móvil versátil para cada tipo de servicio.</h2>
+              <p class="eyebrow eyebrow-dark">Catálogo de Flota & Fichas Técnicas</p>
+              <h2>Equipos especializados configurados para la industria y comercio exterior.</h2>
+              <p>
+                Parque vehicular y remolques de alta resistencia bajo normativas de pesos y dimensiones de la SIECA y SCT México. Unidades monitoreadas satelitalmente, pólizas de seguro de carga y certificaciones para tránsitos transfronterizos.
+              </p>
             </div>
 
+            <!-- Cinta de Credenciales Operativas de Flota -->
+            <div class="fleet-strip reveal">
+              <div class="fleet-strip-item">
+                <span class="fleet-strip-icon">🛡️</span>
+                <div class="fleet-strip-text">
+                  <strong>Seguridad Fiscal</strong>
+                  <span>Marchamos y precintos aduanales DUCA-T</span>
+                </div>
+              </div>
+              <div class="fleet-strip-item">
+                <span class="fleet-strip-icon">⚖️</span>
+                <div class="fleet-strip-text">
+                  <strong>Normativa de Ejes</strong>
+                  <span>Tándem y tridem bajo básculas regionales</span>
+                </div>
+              </div>
+              <div class="fleet-strip-item">
+                <span class="fleet-strip-icon">📡</span>
+                <div class="fleet-strip-text">
+                  <strong>Telemetría en Vivo</strong>
+                  <span>GPS satelital continuo con geocercas</span>
+                </div>
+              </div>
+              <div class="fleet-strip-item">
+                <span class="fleet-strip-icon">🔧</span>
+                <div class="fleet-strip-text">
+                  <strong>Taller y Mantenimiento</strong>
+                  <span>Predio propio en Mixco y auxilio en ruta</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Filtros de Categoría Interactivos -->
+            <div class="fleet-filters reveal">
+              <button type="button" class="fleet-filter-btn is-active" data-filter="all">Todos los Equipos (10)</button>
+              <button type="button" class="fleet-filter-btn" data-filter="dry-van">Furgones y Refrigerados (3)</button>
+              <button type="button" class="fleet-filter-btn" data-filter="platform">Plataformas y Extensibles (3)</button>
+              <button type="button" class="fleet-filter-btn" data-filter="special">Maquinaria y Especiales (2)</button>
+              <button type="button" class="fleet-filter-btn" data-filter="intermodal">Portuario y Tracción (2)</button>
+            </div>
+
+            <!-- Cuadrícula de Equipos Técnicos -->
             <div class="fleet-grid">
-              <article class="fleet-card reveal">
+              <!-- 01: Furgón 53' -->
+              <article class="fleet-card reveal" data-category="dry-van">
                 <div class="fleet-image">
-                  <img src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=900&q=80" alt="Camión plataforma" />
+                  <span class="fleet-badge">ALTA CAPACIDAD · 53 FT</span>
+                  <span class="fleet-code-badge">FUR-53</span>
+                  <img src="./img/furgon-53.jpg" alt="Furgón seco de 53 pies de alta capacidad para carga masiva" loading="lazy" />
                 </div>
                 <div class="fleet-copy">
-                  <h3>Plataformas</h3>
-                  <p>10, 12, 16 toneladas y extensibles hasta 72 pies para carga de gran dimensión.</p>
+                  <span class="fleet-category">Carga Seca & Masiva</span>
+                  <h3>Furgón Seco de 53 Pies</h3>
+                  <p class="fleet-desc">
+                    Caja seca de máximo volumen para transporte masivo y distribución protegida contra intemperie y hurto en rutas nacionales y transfronterizas.
+                  </p>
+                  <div class="fleet-matrix">
+                    <div class="matrix-item">
+                      <span class="matrix-label">Dimensiones</span>
+                      <span class="matrix-value">16.15 m × 2.60 m × 2.75 m</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Volumen</span>
+                      <span class="matrix-value">~115 m³ (Caja Alta)</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Carga Útil</span>
+                      <span class="matrix-value">Hasta 24.5 Toneladas</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Configuración</span>
+                      <span class="matrix-value">2 Ejes · Suspensión Aire</span>
+                    </div>
+                  </div>
+                  <div class="fleet-specs">
+                    <span class="fleet-spec-tag">Marchamo Fiscal DUCA-T</span>
+                    <span class="fleet-spec-tag">Retail & Maquila</span>
+                    <span class="fleet-spec-tag">Consumo Masivo</span>
+                  </div>
+                  <div class="fleet-card-action">
+                    <a href="#contact" class="btn-card-quote" data-unit="Furgón seco de 53 pies">Cotizar este equipo →</a>
+                  </div>
                 </div>
               </article>
 
-              <article class="fleet-card reveal">
+              <!-- 02: Furgón 48' -->
+              <article class="fleet-card reveal" data-category="dry-van">
                 <div class="fleet-image">
-                  <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80" alt="Furgón de carga" />
+                  <span class="fleet-badge">VERSATILIDAD · 48 FT</span>
+                  <span class="fleet-code-badge">FUR-48</span>
+                  <img src="./img/furgon-48.jpg" alt="Furgón cerrado de 48 pies para distribución y CEDIS" loading="lazy" />
                 </div>
                 <div class="fleet-copy">
-                  <h3>Furgones</h3>
-                  <p>Unidades de 48 y 53 pies para mercancías con necesidad de mayor resguardo y control.</p>
+                  <span class="fleet-category">Distribución & CEDIS</span>
+                  <h3>Furgón Cerrado de 48 Pies</h3>
+                  <p class="fleet-desc">
+                    Unidad de alta maniobrabilidad para centros de distribución urbanos, parques fabriles y accesos con restricciones de radio de giro.
+                  </p>
+                  <div class="fleet-matrix">
+                    <div class="matrix-item">
+                      <span class="matrix-label">Dimensiones</span>
+                      <span class="matrix-value">14.63 m × 2.60 m × 2.70 m</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Volumen</span>
+                      <span class="matrix-value">~102 m³</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Carga Útil</span>
+                      <span class="matrix-value">Hasta 23.0 Toneladas</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Configuración</span>
+                      <span class="matrix-value">2 Ejes · Radio Corto</span>
+                    </div>
+                  </div>
+                  <div class="fleet-specs">
+                    <span class="fleet-spec-tag">Acceso a CEDIS</span>
+                    <span class="fleet-spec-tag">Carga Consolidada</span>
+                    <span class="fleet-spec-tag">Suspensión Neumática</span>
+                  </div>
+                  <div class="fleet-card-action">
+                    <a href="#contact" class="btn-card-quote" data-unit="Furgón cerrado de 48 pies">Cotizar este equipo →</a>
+                  </div>
                 </div>
               </article>
 
-              <article class="fleet-card reveal">
+              <!-- 03: Furgón Refrigerado (Reefer) -->
+              <article class="fleet-card reveal" data-category="dry-van">
                 <div class="fleet-image">
-                  <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=80" alt="Cabezales y tractocamiones" />
+                  <span class="fleet-badge">TEMPERATURA CONTROLADA</span>
+                  <span class="fleet-code-badge">REF-53</span>
+                  <img src="./img/furgon-refrigerado.jpg" alt="Furgón refrigerado reefer de 53 pies con control de temperatura para perecederos y farmacéuticos" loading="lazy" />
                 </div>
                 <div class="fleet-copy">
-                  <h3>Cabezales</h3>
-                  <p>Capacidad para tracción y composición de unidades con altos requerimientos de operación.</p>
+                  <span class="fleet-category">Cadena de Frío & Perecederos</span>
+                  <h3>Furgón Refrigerado / Reefer (53')</h3>
+                  <p class="fleet-desc">
+                    Unidades aisladas de 53 pies con equipo de refrigeración autónomo para mantener la cadena de frío ininterrumpida en productos sensibles y perecederos.
+                  </p>
+                  <div class="fleet-matrix">
+                    <div class="matrix-item">
+                      <span class="matrix-label">Rango Temp.</span>
+                      <span class="matrix-value">-20°C a +20°C (Congelado/Fresco)</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Carga Útil</span>
+                      <span class="matrix-value">Hasta 25.0 Toneladas</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Monitoreo</span>
+                      <span class="matrix-value">Termógrafo Digital en Tiempo Real</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Aislamiento</span>
+                      <span class="matrix-value">Paredes Térmicas Herméticas</span>
+                    </div>
+                  </div>
+                  <div class="fleet-specs">
+                    <span class="fleet-spec-tag">Alimentos y Lácteos</span>
+                    <span class="fleet-spec-tag">Farmacéuticos</span>
+                    <span class="fleet-spec-tag">Congelados y Frutas</span>
+                  </div>
+                  <div class="fleet-card-action">
+                    <a href="#contact" class="btn-card-quote" data-unit="Furgón refrigerado / Reefer">Cotizar este equipo →</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 04: Plataforma 2 Ejes -->
+              <article class="fleet-card reveal" data-category="platform">
+                <div class="fleet-image">
+                  <span class="fleet-badge">TÁNDEM · 40' Y 48'</span>
+                  <span class="fleet-code-badge">PLA-2E</span>
+                  <img src="./img/plataforma-2ejes.jpg" alt="Plataforma de 2 ejes tándem para materiales industriales y acero" loading="lazy" />
+                </div>
+                <div class="fleet-copy">
+                  <span class="fleet-category">Carga Abierta & Estructuras</span>
+                  <h3>Plataforma de 2 Ejes (Tándem)</h3>
+                  <p class="fleet-desc">
+                    Plataforma abierta para carga y descarga ágil lateral o superior con grúa, acondicionada para materiales de construcción y fletes industriales.
+                  </p>
+                  <div class="fleet-matrix">
+                    <div class="matrix-item">
+                      <span class="matrix-label">Dimensiones</span>
+                      <span class="matrix-value">12.20 m / 14.63 m × 2.60 m</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Configuración</span>
+                      <span class="matrix-value">2 Ejes (Tándem)</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Carga Útil</span>
+                      <span class="matrix-value">Hasta 22.0 Toneladas</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Sujeción</span>
+                      <span class="matrix-value">Bandas, Matracas & Estacas</span>
+                    </div>
+                  </div>
+                  <div class="fleet-specs">
+                    <span class="fleet-spec-tag">Acero & Perfiles</span>
+                    <span class="fleet-spec-tag">Cemento Ensacado</span>
+                    <span class="fleet-spec-tag">Trincaje Certificado</span>
+                  </div>
+                  <div class="fleet-card-action">
+                    <a href="#contact" class="btn-card-quote" data-unit="Plataforma de 2 ejes tándem">Cotizar este equipo →</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 04: Plataforma 3 Ejes Tridem -->
+              <article class="fleet-card reveal" data-category="platform">
+                <div class="fleet-image">
+                  <span class="fleet-badge">TRIDEM · MÁXIMO PESO LEGAL</span>
+                  <span class="fleet-code-badge">PLA-3E</span>
+                  <img src="./img/plataforma-3ejes.jpg" alt="Plataforma de 3 ejes tridem para bobinas y carga pesada" loading="lazy" />
+                </div>
+                <div class="fleet-copy">
+                  <span class="fleet-category">Distribución Óptima de Carga</span>
+                  <h3>Plataforma de 3 Ejes (Tridem)</h3>
+                  <p class="fleet-desc">
+                    Diseñada con 3 ejes para maximizar la capacidad de carga legal en básculas fiscales regionales sin incurrir en penalizaciones por sobrepeso en eje.
+                  </p>
+                  <div class="fleet-matrix">
+                    <div class="matrix-item">
+                      <span class="matrix-label">Longitud</span>
+                      <span class="matrix-value">48 Pies (14.63 m)</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Configuración</span>
+                      <span class="matrix-value">3 Ejes (Tridem Reforzado)</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Carga Útil</span>
+                      <span class="matrix-value">Hasta 30 - 32 Toneladas</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Normativa</span>
+                      <span class="matrix-value">Cumplimiento SIECA / SCT</span>
+                    </div>
+                  </div>
+                  <div class="fleet-specs">
+                    <span class="fleet-spec-tag">Bobinas de Acero</span>
+                    <span class="fleet-spec-tag">Minería & Canteras</span>
+                    <span class="fleet-spec-tag">Twist-Locks Marítimos</span>
+                  </div>
+                  <div class="fleet-card-action">
+                    <a href="#contact" class="btn-card-quote" data-unit="Plataforma de 3 ejes tridem">Cotizar este equipo →</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 05: Plataforma Extensible -->
+              <article class="fleet-card reveal" data-category="platform">
+                <div class="fleet-image">
+                  <span class="fleet-badge">TELESCRÓPICA EXTENSIBLE</span>
+                  <span class="fleet-code-badge">EXT-TEL</span>
+                  <img src="./img/plataforma-extensible.jpg" alt="Plataforma extensible telescópica para vigas y estructuras sobredimensionadas" loading="lazy" />
+                </div>
+                <div class="fleet-copy">
+                  <span class="fleet-category">Cargas Largas Indivisibles</span>
+                  <h3>Plataforma Extensible</h3>
+                  <p class="fleet-desc">
+                    Chasis telescópico modular con apertura variable para transportar piezas de longitud extraordinaria que superan las plataformas convencionales.
+                  </p>
+                  <div class="fleet-matrix">
+                    <div class="matrix-item">
+                      <span class="matrix-label">Extensión</span>
+                      <span class="matrix-value">De 14.6 m hasta 23+ m</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Configuración</span>
+                      <span class="matrix-value">2 y 3 Ejes Reforzados</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Capacidad</span>
+                      <span class="matrix-value">Hasta 28.0 Toneladas</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Operación</span>
+                      <span class="matrix-value">Señalización & Escolta</span>
+                    </div>
+                  </div>
+                  <div class="fleet-specs">
+                    <span class="fleet-spec-tag">Vigas de Puente</span>
+                    <span class="fleet-spec-tag">Estructuras Metálicas</span>
+                    <span class="fleet-spec-tag">Tubería Petrolera</span>
+                  </div>
+                  <div class="fleet-card-action">
+                    <a href="#contact" class="btn-card-quote" data-unit="Plataforma extensible">Cotizar este equipo →</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 06: Lowboy RGN -->
+              <article class="fleet-card reveal" data-category="special">
+                <div class="fleet-image">
+                  <span class="fleet-badge">CAMA BAJA · RGN</span>
+                  <span class="fleet-code-badge">LOW-RGN</span>
+                  <img src="./img/cama-baja-lowboy.jpg" alt="Lowboy cama baja cuello desmontable RGN para maquinaria pesada" loading="lazy" />
+                </div>
+                <div class="fleet-copy">
+                  <span class="fleet-category">Maquinaria & Sobredimensión</span>
+                  <h3>Lowboy / Cama Baja (RGN)</h3>
+                  <p class="fleet-desc">
+                    Remolque de cama deprimida con cuello de ganso desmontable para carga frontal autónoma de maquinaria pesada sobre orugas o ruedas.
+                  </p>
+                  <div class="fleet-matrix">
+                    <div class="matrix-item">
+                      <span class="matrix-label">Despeje Suelo</span>
+                      <span class="matrix-value">0.60 m a 0.70 m (Deprimida)</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Capacidad</span>
+                      <span class="matrix-value">Hasta 45 - 55 Toneladas</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Configuración</span>
+                      <span class="matrix-value">2 y 3 Ejes Heavy Duty</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Acceso</span>
+                      <span class="matrix-value">Cuello Desmontable Frontal</span>
+                    </div>
+                  </div>
+                  <div class="fleet-specs">
+                    <span class="fleet-spec-tag">Excavadoras & Tractores</span>
+                    <span class="fleet-spec-tag">Plantas Industriales</span>
+                    <span class="fleet-spec-tag">Abanderamiento Oficial</span>
+                  </div>
+                  <div class="fleet-card-action">
+                    <a href="#contact" class="btn-card-quote" data-unit="Lowboy / Cama baja">Cotizar este equipo →</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 07: Granelera Tolva -->
+              <article class="fleet-card reveal" data-category="special">
+                <div class="fleet-image">
+                  <span class="fleet-badge">GRANELERA · DESCARGA INFERIOR</span>
+                  <span class="fleet-code-badge">GRA-TOL</span>
+                  <img src="./img/tolva-granelera.jpg" alt="Tolva granelera industrial para transporte de granos y fertilizantes" loading="lazy" />
+                </div>
+                <div class="fleet-copy">
+                  <span class="fleet-category">Graneles & Agroindustria</span>
+                  <h3>Tolva Granelera Industrial</h3>
+                  <p class="fleet-desc">
+                    Unidades de tolva hermética con compuertas inferiores para el traslado y descarga expedita de productos a granel sin contaminación de carga.
+                  </p>
+                  <div class="fleet-matrix">
+                    <div class="matrix-item">
+                      <span class="matrix-label">Volumen</span>
+                      <span class="matrix-value">~40 a 45 m³</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Carga Útil</span>
+                      <span class="matrix-value">Hasta 28.0 Toneladas</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Descarga</span>
+                      <span class="matrix-value">Compuertas Gravitacionales</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Protección</span>
+                      <span class="matrix-value">Enlonado Hermético Superior</span>
+                    </div>
+                  </div>
+                  <div class="fleet-specs">
+                    <span class="fleet-spec-tag">Granos Limpios</span>
+                    <span class="fleet-spec-tag">Fertilizantes</span>
+                    <span class="fleet-spec-tag">Descarga Rápida en Silo</span>
+                  </div>
+                  <div class="fleet-card-action">
+                    <a href="#contact" class="btn-card-quote" data-unit="Plataforma tolva / Granelera">Cotizar este equipo →</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 08: Chasis Portacontenedores -->
+              <article class="fleet-card reveal" data-category="intermodal">
+                <div class="fleet-image">
+                  <span class="fleet-badge">INTERMODAL · PUERTOS</span>
+                  <span class="fleet-code-badge">POR-CON</span>
+                  <img src="./img/chasis-portacontenedor.jpg" alt="Chasis portacontenedor intermodal con contenedor marítimo de 40 pies" loading="lazy" />
+                </div>
+                <div class="fleet-copy">
+                  <span class="fleet-category">Despacho Portuario Marítimo</span>
+                  <h3>Chasis Portacontenedores</h3>
+                  <p class="fleet-desc">
+                    Esqueléticos reforzados para desalojo portuario inmediato y posicionamiento en plantas industriales desde Puerto Quetzal y Santo Tomás de Castilla.
+                  </p>
+                  <div class="fleet-matrix">
+                    <div class="matrix-item">
+                      <span class="matrix-label">Compatibilidad</span>
+                      <span class="matrix-value">20', 40' y 40' High Cube</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Configuración</span>
+                      <span class="matrix-value">2 y 3 Ejes Portuarios</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Carga Útil</span>
+                      <span class="matrix-value">Hasta 30.0 Toneladas</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Aduanas</span>
+                      <span class="matrix-value">Tránsito Fiscal DUCA-T</span>
+                    </div>
+                  </div>
+                  <div class="fleet-specs">
+                    <span class="fleet-spec-tag">Puerto Quetzal</span>
+                    <span class="fleet-spec-tag">Santo Tomás de Castilla</span>
+                    <span class="fleet-spec-tag">Seguros Twist-Locks</span>
+                  </div>
+                  <div class="fleet-card-action">
+                    <a href="#contact" class="btn-card-quote" data-unit="Chasis portacontenedor">Cotizar este equipo →</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 09: Cabezales y Tractocamiones 6x4 -->
+              <article class="fleet-card reveal" data-category="intermodal">
+                <div class="fleet-image">
+                  <span class="fleet-badge">TRACCIÓN PESADA 6x4</span>
+                  <span class="fleet-code-badge">TRA-6x4</span>
+                  <img src="./img/cabezal-6x4.jpg" alt="Cabezales y tractocamiones 6x4 de tracción pesada transfronteriza" loading="lazy" />
+                </div>
+                <div class="fleet-copy">
+                  <span class="fleet-category">Fuerza Motriz Transfronteriza</span>
+                  <h3>Cabezales y Tractocamiones 6x4</h3>
+                  <p class="fleet-desc">
+                    Tractocamiones de alta gama con doble eje de tracción 6x4 y motores diésel de 450 a 500+ HP para arrastre continuo en pasos montañosos e internacionales.
+                  </p>
+                  <div class="fleet-matrix">
+                    <div class="matrix-item">
+                      <span class="matrix-label">Potencia</span>
+                      <span class="matrix-value">450 - 500+ HP (Diésel)</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Tracción</span>
+                      <span class="matrix-value">6x4 (Doble Eje Motriz)</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Seguridad</span>
+                      <span class="matrix-value">Frenos de Motor Auxiliares</span>
+                    </div>
+                    <div class="matrix-item">
+                      <span class="matrix-label">Telemetría</span>
+                      <span class="matrix-value">GPS Satelital Activo 24h</span>
+                    </div>
+                  </div>
+                  <div class="fleet-specs">
+                    <span class="fleet-spec-tag">Rutas México & CA</span>
+                    <span class="fleet-spec-tag">Pilotos Certificados</span>
+                    <span class="fleet-spec-tag">Mantenimiento Preventivo</span>
+                  </div>
+                  <div class="fleet-card-action">
+                    <a href="#contact" class="btn-card-quote" data-unit="Cabezal / Tractocamión 6x4">Cotizar este equipo →</a>
+                  </div>
                 </div>
               </article>
             </div>
@@ -255,30 +707,71 @@
         <section id="coverage" class="coverage section-spacing">
           <div class="container coverage-grid">
             <div class="coverage-copy reveal">
-              <p class="eyebrow eyebrow-dark">Cobertura</p>
-              <h2>Conectando rutas estratégicas entre Guatemala, México y Centroamérica.</h2>
+              <p class="eyebrow eyebrow-dark">Cobertura Regional e Internacional</p>
+              <h2>Conexión logística y transporte de carga desde México hasta Panamá.</h2>
               <p>
-                Nuestra operación está diseñada para responder con agilidad en conexiones de alto movimiento comercial y rutas críticas para la región.
+                Desde nuestro centro de operaciones en Guatemala y nuestra base en Costa Rica, articulamos presencia física y corredores terrestres continuos que conectan México con toda Centroamérica hasta Panamá:
               </p>
 
               <ul class="coverage-points">
-                <li>Ciudad Hidalgo, México</li>
-                <li>Guatemala central y occidente</li>
-                <li>El Salvador, Honduras, Nicaragua</li>
-                <li>Costa Rica y Panamá</li>
+                <li><strong>Guatemala (Hub Central):</strong> Base central de operaciones, predio de maniobras y conexión directa con aduanas y puertos principales.</li>
+                <li><strong>México (Frontera Sur):</strong> Cruces en Tecún Umán / Ciudad Hidalgo y Talismán con recepción, custodia y arrastre transfronterizo continuo.</li>
+                <li><strong>El Salvador:</strong> Tránsitos ágiles puerta a puerta hacia San Salvador y zonas industriales por aduanas San Cristóbal y Pedro de Alvarado.</li>
+                <li><strong>Honduras:</strong> Enlace regular con San Pedro Sula, Puerto Cortés y Tegucigalpa a través de aduanas Corinto y El Florido.</li>
+                <li><strong>Costa Rica y Panamá:</strong> Operación directa para almacenaje, coordinación de rutas y distribución estratégica en territorio costarricense y enlace hacia Panamá.</li>
               </ul>
             </div>
 
-            <div class="map-card reveal">
-              <div class="map-shell">
-                <div class="map-grid"></div>
-                <div class="pin pin-a">GUA</div>
-                <div class="pin pin-b">HND</div>
-                <div class="pin pin-c">PAN</div>
-                <div class="pin pin-d">MEX</div>
-                <div class="route arc arc-one"></div>
-                <div class="route arc arc-two"></div>
-                <div class="route arc arc-three"></div>
+            <div class="routes-card reveal">
+              <div class="routes-header">
+                <span class="routes-tag">Corredores Mesoamericanos</span>
+                <h3>Rutas Estratégicas Internacionales</h3>
+              </div>
+              <div class="corridors-list">
+                <div class="corridor-item">
+                  <div class="corridor-icon">🇲🇽</div>
+                  <div class="corridor-info">
+                    <h4>Corredor México ⇄ Guatemala</h4>
+                    <p>Frontera Tecún Umán / Cd. Hidalgo ⇄ Guatemala</p>
+                    <span class="corridor-meta">Recepción de carga industrial, materias primas y despacho fronterizo</span>
+                  </div>
+                </div>
+
+                <div class="corridor-item">
+                  <div class="corridor-icon">🇸🇻</div>
+                  <div class="corridor-info">
+                    <h4>Corredor Guatemala ⇄ El Salvador</h4>
+                    <p>Hub Central Mixco ⇄ Frontera San Cristóbal ⇄ San Salvador</p>
+                    <span class="corridor-meta">Entregas programadas, maquila, manufactura y comercio regional</span>
+                  </div>
+                </div>
+
+                <div class="corridor-item">
+                  <div class="corridor-icon">🇭🇳</div>
+                  <div class="corridor-info">
+                    <h4>Corredor Guatemala ⇄ Honduras</h4>
+                    <p>Guatemala ⇄ Aduana Corinto / El Florido ⇄ San Pedro Sula</p>
+                    <span class="corridor-meta">Enlace directo a San Pedro Sula, Tegucigalpa y Puerto Cortés</span>
+                  </div>
+                </div>
+
+                <div class="corridor-item">
+                  <div class="corridor-icon">🇨🇷</div>
+                  <div class="corridor-info">
+                    <h4>Operación Sur: Costa Rica & Panamá</h4>
+                    <p>Gestión Logística Local & Enlace Regional Mesoamericano</p>
+                    <span class="corridor-meta">Distribución, almacenaje y transporte continuo desde Centroamérica hasta Panamá</span>
+                  </div>
+                </div>
+
+                <div class="corridor-item">
+                  <div class="corridor-icon">⚓</div>
+                  <div class="corridor-info">
+                    <h4>Corredores Portuarios Multimodales</h4>
+                    <p>Puerto Quetzal (Pacífico) & Sto. Tomás de Castilla (Atlántico)</p>
+                    <span class="corridor-meta">Despacho de contenedores, importación/exportación y tránsitos fiscales</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -293,114 +786,350 @@
 
             <div class="timeline">
               <article class="timeline-item reveal">
-                <span>01</span>
-                <h3>Consulta y análisis</h3>
-                <p>Definimos la necesidad, la ruta, la carga y los tiempos para diseñar la mejor solución.</p>
+                <div class="step-header">
+                  <span class="step-num">01</span>
+                  <span class="step-tag">Recepción</span>
+                </div>
+                <h3>Consulta y requerimiento</h3>
+                <p>Evaluamos el tipo de carga, especificaciones de ruta y tiempos para diseñar la propuesta logística idónea.</p>
               </article>
               <article class="timeline-item reveal">
-                <span>02</span>
-                <h3>Planificación operativa</h3>
-                <p>Asignamos la unidad más adecuada y preparamos la logística de carga, documentación y ruta.</p>
+                <div class="step-header">
+                  <span class="step-num">02</span>
+                  <span class="step-tag">Asignación</span>
+                </div>
+                <h3>Planificación y flota</h3>
+                <p>Asignamos la unidad adecuada, programamos pilotos experimentados y coordinamos documentación y aduanas.</p>
               </article>
               <article class="timeline-item reveal">
-                <span>03</span>
-                <h3>Ejecuta y rastrea</h3>
-                <p>Monitoreamos cada movimiento con control de operación y comunicación con el cliente.</p>
+                <div class="step-header">
+                  <span class="step-num">03</span>
+                  <span class="step-tag">Tránsito</span>
+                </div>
+                <h3>Despacho y control</h3>
+                <p>Monitoreamos el avance del viaje en carretera con comunicación directa y supervisión en puntos de control.</p>
               </article>
               <article class="timeline-item reveal">
-                <span>04</span>
-                <h3>Entrega y cierre</h3>
-                <p>Validamos la recepción, documentamos el servicio y cerramos con atención post-entrega.</p>
+                <div class="step-header">
+                  <span class="step-num">04</span>
+                  <span class="step-tag">Destino</span>
+                </div>
+                <h3>Entrega y validación</h3>
+                <p>Confirmamos la llegada puntual a destino, validamos la recepción de la mercadería y cerramos con soporte continuo.</p>
               </article>
             </div>
           </div>
         </section>
 
-        <section class="testimonials section-spacing">
+        <section id="sectors" class="sectors-section section-spacing">
           <div class="container">
             <div class="section-heading reveal">
-              <p class="eyebrow eyebrow-dark">Confianza operativa</p>
-              <h2>Clientes que valoran la continuidad y la responsabilidad.</h2>
+              <p class="eyebrow eyebrow-dark">Sectores de Confianza</p>
+              <h2>Soluciones de carga probadas en industrias de alta exigencia.</h2>
+              <p class="section-lead">
+                Operaciones logísticas especializadas con cumplimiento de ventanas horarias, control aduanero y enlace multimodal en Centroamérica y México.
+              </p>
             </div>
 
-            <div class="testimonial-grid">
-              <article class="testimonial-card reveal">
-                <p>“La coordinación, la puntualidad y la disciplina operativa nos han ayudado a mantener entregas competitivas en rutas clave.”</p>
-                <div class="person">
-                  <strong>Operaciones Logísticas</strong>
-                  <span>Distribuidor regional</span>
+            <div class="sectors-ledger reveal">
+              <!-- Sector 1: Retail & Consumo Masivo -->
+              <div class="sector-row">
+                <div class="sector-header">
+                  <div class="sector-icon-wrap">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                      <line x1="3" y1="6" x2="21" y2="6"/>
+                      <path d="M16 10a4 4 0 01-8 0"/>
+                    </svg>
+                  </div>
+                  <div class="sector-title-group">
+                    <span class="sector-badge">Abastecimiento Comercial</span>
+                    <h3 class="sector-name">Sector Retail & Consumo Masivo</h3>
+                    <span class="sector-scope">Distribución y Cadena de Suministro</span>
+                  </div>
                 </div>
-              </article>
 
-              <article class="testimonial-card reveal">
-                <p>“AFUSA nos brinda confianza para mover carga crítica con trazabilidad y control de ruta, sin improvisaciones.”</p>
-                <div class="person">
-                  <strong>Supply Chain Manager</strong>
-                  <span>Empresa de retail</span>
+                <div class="sector-body">
+                  <blockquote class="sector-quote">
+                    “Coordinación y cumplimiento riguroso de citas para abastecimiento en centros de distribución y cadenas comerciales a nivel nacional y regional.”
+                  </blockquote>
                 </div>
-              </article>
 
-              <article class="testimonial-card reveal">
-                <p>“La combinación de flota propia, mantenimiento y atención directa hace la diferencia en operaciones complejas.”</p>
-                <div class="person">
-                  <strong>Importaciones</strong>
-                  <span>Grupo comercial</span>
+                <div class="sector-tags">
+                  <span class="sector-tag">Citas en CEDIS</span>
+                  <span class="sector-tag">Ventanas Estrictas</span>
+                  <span class="sector-tag">Distribución Regional</span>
                 </div>
-              </article>
+              </div>
+
+              <!-- Sector 2: Comercio Exterior & Aduanas -->
+              <div class="sector-row">
+                <div class="sector-header">
+                  <div class="sector-icon-wrap">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"/>
+                      <line x1="2" y1="12" x2="22" y2="12"/>
+                      <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                    </svg>
+                  </div>
+                  <div class="sector-title-group">
+                    <span class="sector-badge">Tránsito Internacional</span>
+                    <h3 class="sector-name">Comercio Exterior & Aduanas</h3>
+                    <span class="sector-scope">Operaciones de Cadena de Suministro</span>
+                  </div>
+                </div>
+
+                <div class="sector-body">
+                  <blockquote class="sector-quote">
+                    “Coordinación aduanera y cumplimiento documental riguroso para el traslado expedito de mercancías en aduanas y corredores comerciales de la región.”
+                  </blockquote>
+                </div>
+
+                <div class="sector-tags">
+                  <span class="sector-tag">Aduanas SAT</span>
+                  <span class="sector-tag">Gestión Documental</span>
+                  <span class="sector-tag">Custodia y Tránsito</span>
+                </div>
+              </div>
+
+              <!-- Sector 3: Portuario & Manufactura -->
+              <div class="sector-row">
+                <div class="sector-header">
+                  <div class="sector-icon-wrap">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M2 20a2.4 2.4 0 002 1 2.4 2.4 0 002-1 2.4 2.4 0 012-1 2.4 2.4 0 012 1 2.4 2.4 0 002 1 2.4 2.4 0 002-1 2.4 2.4 0 012-1 2.4 2.4 0 012 1 2.4 2.4 0 002-1"/>
+                      <path d="M4 18L3 12h18l-1 6"/>
+                      <path d="M7 12V7a2 2 0 012-2h6a2 2 0 012 2v5"/>
+                      <line x1="12" y1="5" x2="12" y2="2"/>
+                    </svg>
+                  </div>
+                  <div class="sector-title-group">
+                    <span class="sector-badge">Operación Intermodal</span>
+                    <h3 class="sector-name">Sector Portuario & Manufactura</h3>
+                    <span class="sector-scope">Logística de Carga Pesada</span>
+                  </div>
+                </div>
+
+                <div class="sector-body">
+                  <blockquote class="sector-quote">
+                    “Maniobras y traslados de contenedores y plataformas desde puertos del Atlántico y Pacífico hacia plantas y bodegas centrales.”
+                  </blockquote>
+                </div>
+
+                <div class="sector-tags">
+                  <span class="sector-tag">Puerto Quetzal</span>
+                  <span class="sector-tag">Santo Tomás de Castilla</span>
+                  <span class="sector-tag">Plataformas & Furgones</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <section id="tracking" class="tracking section-spacing">
-          <div class="container tracking-shell reveal">
-            <div>
-              <p class="eyebrow eyebrow-dark">Seguimiento</p>
-              <h2>Monitorea tus despachos con mayor tranquilidad.</h2>
+
+        <section id="contact" class="contact section-spacing">
+          <div class="container">
+            <div class="section-heading reveal">
+              <p class="eyebrow eyebrow-dark">Cotizaciones & Contacto</p>
+              <h2>Solicita una cotización para tu operación de transporte.</h2>
+              <p>
+                Cuéntanos sobre los requerimientos de tu carga y ruta. Te responderemos con una propuesta personalizada y tiempos de entrega garantizados.
+              </p>
             </div>
-            <a class="btn btn-primary" href="https://staging.gps.gt/" target="_blank" rel="noreferrer">Ingresar al seguimiento</a>
+
+            <div class="contact-grid">
+              <div class="contact-form-card reveal">
+                <h3>Cotizador exprés</h3>
+                <p>Completa los datos de tu viaje y te atenderemos a la brevedad:</p>
+                <form id="quote-form" class="quote-form">
+                  <div class="form-group">
+                    <label for="quote-name">Nombre / Empresa *</label>
+                    <input type="text" id="quote-name" name="name" placeholder="Ej. Tu Nombre o Nombre de Empresa" required />
+                  </div>
+                  <div class="form-row-2">
+                    <div class="form-group">
+                      <label for="quote-phone">Teléfono / WhatsApp *</label>
+                      <input type="tel" id="quote-phone" name="phone" placeholder="Ej. +502 5555 5555" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="quote-email">Correo electrónico</label>
+                      <input type="email" id="quote-email" name="email" placeholder="correo@empresa.com" />
+                    </div>
+                  </div>
+                  <div class="form-row-2">
+                    <div class="form-group">
+                      <label for="quote-service">Tipo de Carga / Unidad *</label>
+                      <select id="quote-service" name="service" required>
+                        <option value="" disabled selected hidden>Selecciona una opción</option>
+                        <optgroup label="Furgones Secos y Refrigerados">
+                          <option value="Furgón seco de 53 pies">Furgón seco de 53' (Alta Capacidad)</option>
+                          <option value="Furgón cerrado de 48 pies">Furgón cerrado de 48' (Distribución & CEDIS)</option>
+                          <option value="Furgón refrigerado / Reefer">Furgón refrigerado / Reefer (Temperatura Controlada)</option>
+                        </optgroup>
+                        <optgroup label="Plataformas y Cargas Especiales">
+                          <option value="Plataforma de 2 ejes tándem">Plataforma tándem de 2 ejes (40' y 48')</option>
+                          <option value="Plataforma de 3 ejes tridem">Plataforma tridem de 3 ejes (Carga Pesada)</option>
+                          <option value="Plataforma extensible">Plataforma extensible (Vigas y estructuras)</option>
+                          <option value="Lowboy / Cama baja">Lowboy / Cama baja (Maquinaria y Sobredimensión)</option>
+                          <option value="Plataforma tolva / Granelera">Tolva / Granelera (Graneles industriales)</option>
+                        </optgroup>
+                        <optgroup label="Portuario & Corredores Internacionales">
+                          <option value="Chasis portacontenedor">Chasis portacontenedor (20' / 40' / 40' HC)</option>
+                          <option value="Cabezal / Tractocamión 6x4">Cabezal / Tractocamión 6x4 (Tracción pesada)</option>
+                          <option value="Carga Internacional México ⇄ Guatemala">Carga Internacional México ⇄ Guatemala</option>
+                          <option value="Entregas a El Salvador / Honduras">Entregas a El Salvador / Honduras</option>
+                          <option value="Operación y Transporte en Costa Rica y Panamá">Operación logística en Costa Rica y Panamá</option>
+                          <option value="Gestión Aduanal y Trámites Fronterizos (DUCA-T)">Gestión aduanal y fronteriza (DUCA-T)</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="quote-route">Ruta (Origen → Destino) *</label>
+                      <input type="text" id="quote-route" name="route" placeholder="Ej. México → Guatemala o San Salvador / Costa Rica / Panamá" required />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="quote-message">Detalles adicionales</label>
+                    <textarea id="quote-message" name="message" rows="3" placeholder="Indica tipo de producto, peso aproximado o fecha tentativa del traslado..."></textarea>
+                  </div>
+                  <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-submit">
+                      <span>Enviar solicitud de cotización</span>
+                    </button>
+                    <button type="button" id="btn-quote-whatsapp" class="btn btn-whatsapp-direct">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                      <span>Cotizar directo por WhatsApp</span>
+                    </button>
+                  </div>
+                  <div id="quote-feedback" class="quote-feedback" style="display: none;"></div>
+                </form>
+              </div>
+
+              <div class="contact-info-card reveal">
+                <div class="info-badge">Presencia Regional & Sede Central</div>
+                <h3>Grupo Pronoeo, S.A.</h3>
+                <p class="info-sub">Transporte de carga pesada, logística internacional y soluciones aduanales desde México hasta Panamá.</p>
+
+                <div class="info-list">
+                  <div class="info-item">
+                    <span class="info-icon">🌎</span>
+                    <div>
+                      <strong>Presencia y Corredores Regionales</strong>
+                      <p>Guatemala (Sede y Hub Central) · Costa Rica (Operación) · Rutas activas: México, El Salvador, Honduras, Nicaragua, Costa Rica y Panamá</p>
+                    </div>
+                  </div>
+
+                  <div class="info-item">
+                    <span class="info-icon">🏢</span>
+                    <div class="info-content-flex">
+                      <div>
+                        <strong>Oficinas Centrales</strong>
+                        <p>14 Calle 6-83, Zona 11, Ciudad de Guatemala, C.A.</p>
+                      </div>
+                      <button type="button" class="btn-copy" data-copy="14 Calle 6-83, Zona 11, Ciudad de Guatemala" aria-label="Copiar dirección">Copiar</button>
+                    </div>
+                  </div>
+
+                  <div class="info-item">
+                    <span class="info-icon">🚛</span>
+                    <div>
+                      <strong>Centro Operativo y Predio</strong>
+                      <p>Mixco, Guatemala (Acceso directo a principales autopistas y corredores)</p>
+                    </div>
+                  </div>
+
+                  <div class="info-item">
+                    <span class="info-icon">🛡️</span>
+                    <div>
+                      <strong>Seguridad y Monitoreo en Ruta</strong>
+                      <p>Trazabilidad satelital en tiempo real, custodia logística y pólizas de transporte.</p>
+                    </div>
+                  </div>
+
+                  <div class="info-item">
+                    <span class="info-icon">🕒</span>
+                    <div>
+                      <strong>Horario de Atención</strong>
+                      <p>Lunes a viernes de 8:00 a 17:30 hrs.</p>
+                    </div>
+                  </div>
+
+                  <div class="info-item">
+                    <span class="info-icon">🌐</span>
+                    <div>
+                      <strong>Canal Oficial en Facebook</strong>
+                      <p><a href="https://www.facebook.com/PRONOEO/" target="_blank" rel="noopener noreferrer" class="link-external">facebook.com/PRONOEO ↗</a></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info-footer-note">
+                  <p>Fundada en febrero de 2012 con más de 14 años de trayectoria y disciplina logística regional.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
 
-      <footer id="contact" class="site-footer">
+      <footer class="site-footer">
         <div class="container footer-grid">
           <div class="footer-brand">
-            <a href="#top" class="brand" aria-label="AFUSA inicio">
-              <span class="brand-mark">AF</span>
-              <span class="brand-text">AFUSA</span>
+            <a href="#top" class="brand" aria-label="Grupo Pronoeo inicio">
+              <img
+                class="brand-logo footer-logo"
+                src="./img/Pronoeo%20logo.png"
+                alt="Logo de Grupo Pronoeo"
+              />
+              <span class="brand-name">Grupo Pronoeo</span>
             </a>
-            <p>Transporte y logística con enfoque regional, operativo y seguro.</p>
+            <p>Transporte de carga pesada, logística transfronteriza y trámites aduanales con cobertura desde México hasta Panamá.</p>
           </div>
 
           <div>
-            <h3>Contacto</h3>
+            <h3>Datos de Contacto</h3>
             <ul>
-              <li>5ta Avenida 3-24 Sector A-5, Ciudad San Cristóbal I</li>
-              <li>Zona 8 de Mixco, Guatemala</li>
-              <li>+502 2379-1022</li>
-              <li>info@afusa.com.gt</li>
+              <li><strong>Razón Social:</strong> Grupo Pronoeo, S.A.</li>
+              <li><strong>Cobertura:</strong> México hasta Panamá</li>
+              <li><strong>Oficinas:</strong> 14 Calle 6-83, Zona 11, Ciudad de Guatemala</li>
+              <li><strong>Operaciones:</strong> Mixco, Guatemala</li>
+              <li><strong>Facebook:</strong> <a href="https://www.facebook.com/PRONOEO/" target="_blank" rel="noopener noreferrer">Transportes Pronoeo</a></li>
             </ul>
           </div>
 
           <div>
-            <h3>Enlaces</h3>
+            <h3>Navegación</h3>
             <ul>
               <li><a href="#about">Nosotros</a></li>
-              <li><a href="#services">Servicios</a></li>
+              <li><a href="#services">Servicios y Aduanas</a></li>
               <li><a href="#fleet">Flota</a></li>
-              <li><a href="#coverage">Cobertura</a></li>
+              <li><a href="#coverage">Cobertura Regional</a></li>
+              <li><a href="#contact">Cotizaciones</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <div class="container">
-            <p>© 2026 AFUSA. Todos los derechos reservados.</p>
+          <div class="container footer-bottom-flex">
+            <p>© 2026 Grupo Pronoeo, S.A. Todos los derechos reservados.</p>
+            <p class="footer-legal-tag">Transporte Terrestre · Logística · Aduanas · México hasta Panamá</p>
           </div>
         </div>
       </footer>
+
+      <!-- Botón Flotante de WhatsApp -->
+      <a
+        href="https://wa.me/?text=Hola%2C%20me%20comunico%20desde%20la%20p%C3%A1gina%20web%20de%20Grupo%20Pronoeo%20y%20deseo%20solicitar%20una%20cotizaci%C3%B3n%20de%20transporte."
+        id="floating-whatsapp"
+        class="floating-whatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Cotizar por WhatsApp con Grupo Pronoeo"
+      >
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      </a>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./js/script.js?v=5.3"></script>
   </body>
 </html>
