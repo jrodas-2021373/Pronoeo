@@ -1,3 +1,43 @@
+/**
+ * ============================================================================
+ * Grupo Pronoeo, S.A. - Primary Design System & Responsive Stylesheet
+ * Document: styles.css
+ * Architecture: CSS3 (Custom Properties / Design Tokens, Flexbox, CSS Grid)
+ * Description: Clean, modern logistics design system featuring corporate navy
+ *              and sky-blue palettes, glassmorphism, responsive data matrices,
+ *              accessible modal dialogs, and fluid typography.
+ * ============================================================================
+ *
+ * SECTION INDEX:
+ * 1.  DESIGN TOKENS & SYSTEM VARIABLES (:root)
+ * 2.  GLOBAL RESETS & BASE TYPOGRAPHY
+ * 3.  SHARED LAYOUT CONTAINERS & UTILITY CLASSES
+ * 4.  GLOBAL STICKY HEADER & NAVIGATION PANEL
+ * 5.  BUTTONS & CALL-TO-ACTION CONTROLS
+ * 6.  FULL-BLEED CINEMATIC VIDEO HERO SECTION
+ * 7.  CORPORATE IDENTITY & OPERATIONAL PILLARS (ABOUT US)
+ * 8.  SPECIALIZED LOGISTICS & CUSTOMS SERVICES GRID
+ * 9.  FLEET CREDENTIALS & OPERATIONAL ASSURANCE STRIP
+ * 10. INTERACTIVE FLEET CATEGORY FILTER TABS
+ * 11. TECHNICAL FLEET GRID & EQUIPMENT CARDS
+ * 12. TECHNICAL SPECIFICATION MATRIX & BADGES
+ * 13. MESOAMERICAN FREIGHT CORRIDORS & COVERAGE SECTION
+ * 14. OPERATIONAL WORKFLOW TIMELINE
+ * 15. STRATEGIC INDUSTRY VERTICALS & SECTORS LEDGER
+ * 16. TESTIMONIALS & SOCIAL PROOF GRID
+ * 17. GLOBAL SITE FOOTER & LEGAL ATTRIBUTION
+ * 18. COMMERCIAL CONTACT & FREIGHT QUOTATION ENGINE
+ * 19. CONTACT INFORMATION & PHYSICAL HEADQUARTERS CARD
+ * 20. FLOATING WHATSAPP QUICK-ACTION BUTTON
+ * 21. SCROLL-TRIGGERED REVEAL ANIMATIONS
+ * 22. DIRECT CONTACT CHANNELS MODAL DIALOG
+ * 23. RESPONSIVE MEDIA QUERIES (980px, 768px, 640px)
+ * ============================================================================
+ */
+
+/* ==========================================================================
+   1. Design Tokens & System Variables
+   ========================================================================== */
 :root {
   --bg: #f8fafc;
   --bg-elevated: #ffffff;
@@ -23,6 +63,9 @@
   --container: min(1180px, calc(100vw - 32px));
 }
 
+/* ==========================================================================
+   2. Global Resets & Base Elements
+   ========================================================================== */
 * {
   box-sizing: border-box;
 }
@@ -56,6 +99,9 @@ button {
   font: inherit;
 }
 
+/* ==========================================================================
+   3. Shared Layout Containers & Typography Scales
+   ========================================================================== */
 .container {
   width: var(--container);
   margin: 0 auto;
@@ -120,6 +166,9 @@ p {
   overflow: hidden;
 }
 
+/* ==========================================================================
+   4. Global Sticky Header & Desktop/Mobile Navigation
+   ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
@@ -216,6 +265,37 @@ p {
   gap: 12px;
 }
 
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-toggle:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.12);
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-strong);
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* ==========================================================================
+   5. Buttons & Interactive Call-to-Action Controls
+   ========================================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -256,35 +336,9 @@ p {
   color: var(--primary);
 }
 
-.menu-toggle {
-  display: none;
-  width: 44px;
-  height: 44px;
-  border: 1px solid var(--line-strong);
-  border-radius: 12px;
-  background: #ffffff;
-  cursor: pointer;
-  padding: 10px;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.menu-toggle:hover {
-  border-color: var(--primary);
-  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.12);
-}
-
-.menu-toggle span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: var(--primary-strong);
-  margin: 5px 0;
-  border-radius: 2px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-/* Hero Cinemático con Video de Fondo en Alta Definición (Estilo Minimalista) */
+/* ==========================================================================
+   6. Full-Bleed Cinematic Video Hero Section
+   ========================================================================== */
 .hero-video-cinematic {
   position: relative;
   min-height: calc(100vh - 78px);
@@ -505,7 +559,9 @@ p {
   gap: 40px;
 }
 
-/* About Section - Balanced Split & 3-Pillar Row */
+/* ==========================================================================
+   7. Corporate Identity & Operational Pillars (About Us)
+   ========================================================================== */
 .about-top-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -565,7 +621,7 @@ p {
   transform: scale(1.03);
 }
 
-/* Pilares en Fila Horizontal de 3 Columnas */
+/* Three-Column Horizontal Pillars Grid */
 .about-pillars-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -623,6 +679,9 @@ p {
   margin-bottom: 32px;
 }
 
+/* ==========================================================================
+   8. Specialized Logistics & Customs Brokerage Services Grid
+   ========================================================================== */
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -674,7 +733,15 @@ p {
   color: #ffffff;
 }
 
-/* Fleet Credentials Strip */
+/* ==========================================================================
+   09. FLEET CREDENTIALS & OPERATIONAL ASSURANCE STRIP
+   ========================================================================== */
+
+/**
+ * High-density operational credentials banner displayed directly above the fleet catalog.
+ * Renders key technical assurances (certified payloads, real-time satellite GPS tracking,
+ * full-risk cargo insurance, and preventive telemetry maintenance) in a 4-column layout.
+ */
 .fleet-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -682,6 +749,9 @@ p {
   margin-bottom: 28px;
 }
 
+/**
+ * Individual credential card with subtle elevation and border highlight on hover.
+ */
 .fleet-strip-item {
   background: #ffffff;
   border: 1px solid var(--line);
@@ -719,7 +789,14 @@ p {
   display: block;
 }
 
-/* Fleet Interactive Category Filters */
+/* ==========================================================================
+   10. INTERACTIVE FLEET CATEGORY FILTER TABS
+   ========================================================================== */
+
+/**
+ * Horizontal filter button container enabling instant client-side filtering
+ * of fleet units across categories (All, Dry Van, Flatbed, Heavy Haul, Reefer, Specialized).
+ */
 .fleet-filters {
   display: flex;
   flex-wrap: wrap;
@@ -727,6 +804,9 @@ p {
   margin-bottom: 30px;
 }
 
+/**
+ * Pill-shaped filter button with smooth transitions and tactile focus/active styling.
+ */
 .fleet-filter-btn {
   background: #ffffff;
   border: 1px solid var(--line-strong);
@@ -746,6 +826,9 @@ p {
   background: var(--primary-light);
 }
 
+/**
+ * Active filter button state with solid primary brand fill and ambient glow shadow.
+ */
 .fleet-filter-btn.is-active {
   background: var(--primary);
   border-color: var(--primary);
@@ -753,13 +836,24 @@ p {
   box-shadow: 0 4px 14px rgba(2, 132, 199, 0.28);
 }
 
-/* Fleet Grid & Technical Cards */
+/* ==========================================================================
+   11. TECHNICAL FLEET GRID & EQUIPMENT CARDS
+   ========================================================================== */
+
+/**
+ * Responsive 2-column grid showcasing the complete heavy transport fleet.
+ * Features CSS-driven transitions for smooth filtering animations.
+ */
 .fleet-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
 }
 
+/**
+ * Specialized equipment card encapsulating media, category badges, technical
+ * specification matrices, and quick-quotation trigger links.
+ */
 .fleet-card {
   display: flex;
   flex-direction: column;
@@ -767,6 +861,9 @@ p {
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.25s ease;
 }
 
+/**
+ * Image container with fixed height and zoom-on-hover effect for visual immersion.
+ */
 .fleet-image {
   position: relative;
   height: 250px;
@@ -784,6 +881,9 @@ p {
   transform: scale(1.05);
 }
 
+/**
+ * Floating equipment category badge positioned in the top-left of the media frame.
+ */
 .fleet-badge {
   position: absolute;
   top: 14px;
@@ -801,6 +901,9 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/**
+ * Floating alphanumeric model identifier code (e.g., FUR-53, LOW-RGN) in top-right.
+ */
 .fleet-code-badge {
   position: absolute;
   top: 14px;
@@ -817,6 +920,9 @@ p {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
+/**
+ * Content container housing typography, specification matrix, and action link.
+ */
 .fleet-copy {
   padding: 24px 22px;
   display: flex;
@@ -848,7 +954,13 @@ p {
   margin: 0 0 14px;
 }
 
-/* Technical Specification Matrix */
+/* ==========================================================================
+   12. TECHNICAL SPECIFICATION MATRIX & EQUIPMENT BADGES
+   ========================================================================== */
+
+/**
+ * 2x2 key engineering metrics grid (Capacity, Dimensions, Volume, Suspension).
+ */
 .fleet-matrix {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -881,6 +993,9 @@ p {
   line-height: 1.25;
 }
 
+/**
+ * Feature tag pills highlighting specialized capabilities (e.g., GPS, Air-Ride, Ramps).
+ */
 .fleet-specs {
   display: flex;
   flex-wrap: wrap;
@@ -910,6 +1025,9 @@ p {
   color: var(--primary-strong);
 }
 
+/**
+ * Bottom action container holding the contextual quote request link.
+ */
 .fleet-card-action {
   margin-top: 12px;
   padding-top: 12px;
@@ -933,6 +1051,14 @@ p {
   gap: 8px;
 }
 
+/* ==========================================================================
+   13. MESOAMERICAN FREIGHT CORRIDORS & REGIONAL COVERAGE
+   ========================================================================== */
+
+/**
+ * Split 2-column layout pairing regional coverage value propositions
+ * with a high-visibility freight corridors card.
+ */
 .coverage-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -951,6 +1077,9 @@ p {
   margin-bottom: 12px;
 }
 
+/**
+ * Bulleted feature list detailing cross-border trade lanes, dry ports, and customs clearance.
+ */
 .coverage-points {
   list-style: none;
   padding: 0;
@@ -985,7 +1114,9 @@ p {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
 }
 
-/* Corredores de Carga y Cobertura Nacional */
+/**
+ * Translucent glassmorphism routes card showcasing active Mesoamerican transit corridors.
+ */
 .routes-card {
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(46, 80, 119, 0.14);
@@ -1030,6 +1161,9 @@ p {
   justify-content: space-between;
 }
 
+/**
+ * Individual freight corridor entry with transit mode iconography and routing metadata.
+ */
 .corridor-item {
   display: flex;
   align-items: flex-start;
@@ -1078,6 +1212,13 @@ p {
   display: block;
 }
 
+/* ==========================================================================
+   14. OPERATIONAL WORKFLOW TIMELINE ("CÓMO TRABAJAMOS")
+   ========================================================================== */
+
+/**
+ * 4-step chronological execution timeline connected by a gradient progress track.
+ */
 .timeline {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1115,6 +1256,9 @@ p {
   margin-bottom: 18px;
 }
 
+/**
+ * Circular step number badge with solid brand background.
+ */
 .step-num {
   display: inline-flex;
   align-items: center;
@@ -1140,7 +1284,10 @@ p {
   border-radius: 999px;
 }
 
-/* Sectores de Confianza - Ledger Layout */
+/* ==========================================================================
+   15. STRATEGIC INDUSTRY VERTICALS & SECTORS LEDGER
+   ========================================================================== */
+
 .section-lead {
   max-width: 680px;
   margin: 12px 0 0;
@@ -1149,6 +1296,10 @@ p {
   line-height: 1.6;
 }
 
+/**
+ * High-precision ledger structure presenting commercial sectors
+ * in an institutional row-by-row layout with hover interaction indicators.
+ */
 .sectors-ledger {
   background: #ffffff;
   border: 1px solid var(--line);
@@ -1158,6 +1309,9 @@ p {
   margin-top: 36px;
 }
 
+/**
+ * 3-column ledger row: (1) Sector Header & Icon, (2) Strategic Scope & Body, (3) Compliance Tags.
+ */
 .sector-row {
   display: grid;
   grid-template-columns: 310px 1fr 200px;
@@ -1173,6 +1327,9 @@ p {
   border-bottom: none;
 }
 
+/**
+ * Active accent indicator bar revealing on hover along the left edge.
+ */
 .sector-row::before {
   content: "";
   position: absolute;
@@ -1199,6 +1356,9 @@ p {
   gap: 16px;
 }
 
+/**
+ * Tactile iconography badge with scale and color inversion on row hover.
+ */
 .sector-icon-wrap {
   flex-shrink: 0;
   width: 54px;
@@ -1246,6 +1406,9 @@ p {
   color: var(--muted);
 }
 
+/**
+ * Narrative testimonial or operational description column with subtle left border.
+ */
 .sector-body {
   position: relative;
   padding-left: 20px;
@@ -1260,6 +1423,9 @@ p {
   font-style: italic;
 }
 
+/**
+ * Column housing vertical tag badges indicating technical certifications or commodities handled.
+ */
 .sector-tags {
   display: flex;
   flex-direction: column;
@@ -1287,7 +1453,13 @@ p {
   color: var(--primary-strong);
 }
 
-/* Fallback para grid de testimonios si se requiere */
+/* ==========================================================================
+   16. TESTIMONIALS & SOCIAL PROOF GRID
+   ========================================================================== */
+
+/**
+ * 3-column card grid for client testimonials and industry stakeholder reviews.
+ */
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1325,12 +1497,18 @@ p {
   font-size: 0.82rem;
 }
 
-/* Site Footer */
+/* ==========================================================================
+   17. GLOBAL SITE FOOTER & LEGAL ATTRIBUTION
+   ========================================================================== */
+
 .site-footer {
   border-top: 1px solid var(--line);
   background: #ffffff;
 }
 
+/**
+ * 3-column navigation grid housing brand summary, internal links, and services.
+ */
 .footer-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr;
@@ -1375,6 +1553,9 @@ p {
   gap: 12px;
 }
 
+/**
+ * Bottom attribution and copyright bar.
+ */
 .footer-bottom {
   border-top: 1px solid var(--line);
   background: var(--bg-soft);
@@ -1400,7 +1581,14 @@ p {
   color: var(--muted);
 }
 
-/* Contact & Quotation Section */
+/* ==========================================================================
+   18. COMMERCIAL CONTACT & FREIGHT QUOTATION ENGINE
+   ========================================================================== */
+
+/**
+ * 2-column asymmetric layout (form card + institutional contact card)
+ * designed for seamless dual lead capture (interactive form + instant WhatsApp).
+ */
 .contact-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -1453,6 +1641,9 @@ p {
   color: var(--muted-2);
 }
 
+/**
+ * Accessible form controls with custom focus rings and consistent typography.
+ */
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -1499,6 +1690,9 @@ p {
   padding: 1rem 1.6rem;
 }
 
+/**
+ * Instant WhatsApp dispatch action triggering pre-populated executive chat.
+ */
 .btn-whatsapp-direct {
   display: inline-flex;
   align-items: center;
@@ -1522,6 +1716,9 @@ p {
   transform: translateY(-2px);
 }
 
+/**
+ * Form submission feedback banner with success styling.
+ */
 .quote-feedback {
   padding: 14px 18px;
   border-radius: 12px;
@@ -1536,7 +1733,10 @@ p {
   color: #1a632c;
 }
 
-/* Contact Info Card */
+/* ==========================================================================
+   19. CONTACT INFORMATION & PHYSICAL HEADQUARTERS CARD
+   ========================================================================== */
+
 .info-badge {
   display: inline-flex;
   align-items: center;
@@ -1597,6 +1797,9 @@ p {
   gap: 12px;
 }
 
+/**
+ * Interactive one-click clipboard copy utility button with confirmed check feedback.
+ */
 .btn-copy {
   flex-shrink: 0;
   padding: 5px 12px;
@@ -1648,7 +1851,14 @@ p {
   font-style: italic;
 }
 
-/* Floating WhatsApp Button */
+/* ==========================================================================
+   20. QUICK-ACTION FLOATING WHATSAPP BUTTON
+   ========================================================================== */
+
+/**
+ * Fixed floating action button (FAB) positioned in bottom-right viewport.
+ * Provides high-priority direct mobile messaging channel with elevated shadow.
+ */
 .floating-whatsapp {
   position: fixed;
   bottom: 26px;
@@ -1671,6 +1881,13 @@ p {
   box-shadow: 0 18px 36px rgba(37, 211, 102, 0.48);
 }
 
+/* ==========================================================================
+   21. SCROLL-TRIGGERED REVEAL ANIMATION UTILITIES
+   ========================================================================== */
+
+/**
+ * Scroll-observer utility classes enabling subtle entrance translations.
+ */
 .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -1683,8 +1900,13 @@ p {
 }
 
 /* ==========================================================================
-   Modal de Canales de Contacto Directo
+   22. DIRECT CONTACT CHANNELS MODAL DIALOG
    ========================================================================== */
+
+/**
+ * Semi-transparent backdrop overlay with backdrop-filter blur
+ * covering the entire viewport. Provides accessible click-outside dismissal.
+ */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -1706,6 +1928,10 @@ p {
   visibility: visible;
 }
 
+/**
+ * Centered modal dialog window with spring entrance transition,
+ * responsive maximum width, and overflow scrolling for small screens.
+ */
 .modal-dialog {
   background: #ffffff;
   border-radius: var(--radius);
@@ -1726,6 +1952,9 @@ p {
   transform: translateY(0) scale(1);
 }
 
+/**
+ * Accessible close button with 90-degree rotation and soft red hover state.
+ */
 .modal-close {
   position: absolute;
   top: 18px;
@@ -1785,6 +2014,9 @@ p {
   line-height: 1.45;
 }
 
+/**
+ * Featured high-conversion WhatsApp banner at top of dialog.
+ */
 .modal-wa-btn {
   display: flex;
   align-items: center;
@@ -1844,6 +2076,9 @@ p {
   transform: translateX(4px);
 }
 
+/**
+ * Channel options list (PBX phone lines, direct email, Facebook messenger/page).
+ */
 .modal-channels {
   display: flex;
   flex-direction: column;
@@ -1944,6 +2179,9 @@ p {
   text-decoration: underline;
 }
 
+/**
+ * Footer link redirecting users from the contact modal to the interactive quote engine.
+ */
 .modal-footer-prompt {
   margin-top: 22px;
   padding-top: 16px;
@@ -1972,6 +2210,14 @@ p {
   transform: translateX(2px);
 }
 
+/* ==========================================================================
+   23. RESPONSIVE MEDIA QUERIES & FLUID LAYOUT ADAPTERS
+   ========================================================================== */
+
+/**
+ * Tablet and Compact Desktop Breakpoint (<= 980px)
+ * Reconfigures navigation into a collapsible drawer and collapses multi-column grids.
+ */
 @media (max-width: 980px) {
   .hero-grid,
   .two-columns,
@@ -2003,6 +2249,7 @@ p {
     padding-right: clamp(20px, 4vw, 40px);
   }
 
+  /* Mobile Navigation Drawer Panel */
   .nav-panel {
     position: absolute;
     top: calc(100% + 8px);
@@ -2085,6 +2332,7 @@ p {
     grid-template-columns: 1fr;
   }
 
+  /* Vertical Timeline Layout Transformation */
   .timeline {
     grid-template-columns: 1fr;
     position: relative;
@@ -2158,6 +2406,10 @@ p {
   }
 }
 
+/**
+ * Mobile Handset Breakpoint (<= 640px)
+ * Optimizes touch targets, compacts typography, and converts tabs into swipeable bar.
+ */
 @media (max-width: 640px) {
   .section-spacing {
     padding: 56px 0;
@@ -2290,6 +2542,7 @@ p {
     margin-bottom: 22px;
   }
 
+  /* Horizontal swipeable fleet category filter bar */
   .fleet-filters {
     gap: 8px;
     overflow-x: auto;
