@@ -187,4 +187,82 @@ if (quoteUnitBtns.length && quoteServiceSelect) {
   });
 }
 
+// Modal de Canales de Contacto Directo y diferenciación con Cotizar
+const btnNavContact = document.getElementById('btn-nav-contact');
+const btnNavQuote = document.getElementById('btn-nav-quote');
+const contactModal = document.getElementById('contact-modal');
+const modalClose = document.getElementById('modal-close');
+const modalGotoQuote = document.getElementById('modal-goto-quote');
+const quoteNameInput = document.getElementById('quote-name');
+
+function openContactModal() {
+  if (!contactModal) return;
+  contactModal.classList.add('is-open');
+  contactModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  modalClose?.focus();
+}
+
+function closeContactModal() {
+  if (!contactModal) return;
+  contactModal.classList.remove('is-open');
+  contactModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  btnNavContact?.focus();
+}
+
+if (btnNavContact) {
+  btnNavContact.addEventListener('click', (e) => {
+    e.preventDefault();
+    openContactModal();
+  });
+}
+
+if (modalClose) {
+  modalClose.addEventListener('click', () => {
+    closeContactModal();
+  });
+}
+
+if (contactModal) {
+  contactModal.addEventListener('click', (e) => {
+    if (e.target === contactModal) {
+      closeContactModal();
+    }
+  });
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && contactModal?.classList.contains('is-open')) {
+    closeContactModal();
+  }
+});
+
+if (modalGotoQuote) {
+  modalGotoQuote.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeContactModal();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        quoteNameInput?.focus();
+      }, 600);
+    }
+  });
+}
+
+if (btnNavQuote) {
+  btnNavQuote.addEventListener('click', (e) => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      e.preventDefault();
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        quoteNameInput?.focus();
+      }, 600);
+    }
+  });
+}
+
 

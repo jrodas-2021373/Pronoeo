@@ -1682,6 +1682,296 @@ p {
   transform: translateY(0);
 }
 
+/* ==========================================================================
+   Modal de Canales de Contacto Directo
+   ========================================================================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 25, 47, 0.68);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+}
+
+.modal-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-dialog {
+  background: #ffffff;
+  border-radius: var(--radius);
+  max-width: 580px;
+  width: 100%;
+  max-height: calc(100vh - 40px);
+  max-height: calc(100dvh - 40px);
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(10, 25, 47, 0.28);
+  border: 1px solid rgba(2, 132, 199, 0.16);
+  padding: 34px 30px;
+  position: relative;
+  transform: translateY(18px) scale(0.97);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.is-open .modal-dialog {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  color: var(--muted-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  z-index: 5;
+}
+
+.modal-close:hover {
+  background: #fee2e2;
+  color: #dc2626;
+  border-color: #fecaca;
+  transform: rotate(90deg);
+}
+
+.modal-header {
+  margin-bottom: 20px;
+}
+
+.modal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.modal-header h3 {
+  margin: 0 0 6px;
+  font-size: 1.55rem;
+  color: var(--primary-strong);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.modal-subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.modal-wa-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #ffffff !important;
+  padding: 16px 18px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 22px;
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-wa-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.38);
+}
+
+.modal-wa-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+.modal-wa-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.modal-wa-text strong {
+  font-size: 0.98rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.modal-wa-text span {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.modal-wa-arrow {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  transition: transform 0.2s ease;
+}
+
+.modal-wa-btn:hover .modal-wa-arrow {
+  transform: translateX(4px);
+}
+
+.modal-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-channel-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.modal-channel-card:hover {
+  border-color: rgba(2, 132, 199, 0.3);
+  background: #ffffff;
+}
+
+.modal-channel-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.modal-channel-icon-fb {
+  background: rgba(24, 119, 242, 0.12);
+  color: #1877F2;
+}
+
+.modal-channel-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.modal-channel-info h4 {
+  margin: 0 0 2px;
+  font-size: 0.92rem;
+  color: var(--primary-strong);
+  font-weight: 700;
+}
+
+.modal-channel-info p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted-2);
+  line-height: 1.35;
+}
+
+.modal-channel-subtext {
+  font-size: 0.78rem !important;
+  color: var(--muted) !important;
+  margin-top: 2px !important;
+}
+
+.modal-copy-btn {
+  padding: 6px 12px;
+  font-size: 0.76rem;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border: 1px solid var(--line-strong);
+  color: var(--primary-strong);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.modal-copy-btn:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.modal-channel-link {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #1877F2;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(24, 119, 242, 0.08);
+  transition: background 0.2s ease;
+}
+
+.modal-channel-link:hover {
+  background: rgba(24, 119, 242, 0.16);
+  text-decoration: underline;
+}
+
+.modal-footer-prompt {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.modal-quote-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary);
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-quote-link:hover {
+  color: var(--accent);
+  transform: translateX(2px);
+}
+
 @media (max-width: 980px) {
   .hero-grid,
   .two-columns,
@@ -2096,5 +2386,24 @@ p {
 
   .cta-row {
     flex-direction: column;
+  }
+
+  .modal-dialog {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  .modal-header h3 {
+    font-size: 1.35rem;
+  }
+
+  .modal-channel-card {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .modal-copy-btn,
+  .modal-channel-link {
+    margin-left: auto;
   }
 }
