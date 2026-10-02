@@ -1,35 +1,25 @@
 /**
- * ============================================================================
- * Grupo Pronoeo - Interactive Client Application Script
- * Architecture: Vanilla JavaScript (ES6+)
- * Description: Handles client-side interactivity, accessibility (ARIA),
- *              dynamic UI state transitions, responsive navigation, quote
- *              serialization, fleet filtering, and modal dialog lifecycle.
- * ============================================================================
+ * Grupo Pronoeo - Client-side scripts
+ * Handles mobile navigation, scroll reveal, quote form serialization to WhatsApp,
+ * fleet filtering, and contact modal.
  */
 
 /* ==========================================================================
-   1. Mobile Navigation & Accessible Drawer Controller
+   1. Mobile Navigation & Drawer Menu
    ========================================================================== */
 
-/**
- * Mobile hamburger toggle button and collapsible navigation drawer panel.
- */
+// Mobile menu toggle button and navigation drawer
 const menuToggle = document.querySelector('.menu-toggle');
 const navPanel = document.querySelector('.nav-panel');
 
 if (menuToggle && navPanel) {
-  /**
-   * Toggles the navigation drawer's active state and synchronizes aria-expanded.
-   */
+  // Toggle navigation drawer on click
   menuToggle.addEventListener('click', () => {
     const isOpen = navPanel.classList.toggle('is-open');
     menuToggle.setAttribute('aria-expanded', String(isOpen));
   });
 
-  /**
-   * Auto-closes the mobile drawer when clicking any internal navigation anchor.
-   */
+  // Close drawer when clicking a navigation link
   navPanel.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       navPanel.classList.remove('is-open');
@@ -37,9 +27,7 @@ if (menuToggle && navPanel) {
     });
   });
 
-  /**
-   * Closes the drawer if a user clicks anywhere outside the navigation container.
-   */
+  // Close drawer when clicking outside
   document.addEventListener('click', (e) => {
     if (
       navPanel.classList.contains('is-open') &&
@@ -53,13 +41,10 @@ if (menuToggle && navPanel) {
 }
 
 /* ==========================================================================
-   2. Scroll-Triggered Reveal Animations (Intersection Observer)
+   2. Scroll Reveal Animations (Intersection Observer)
    ========================================================================== */
 
-/**
- * Observes DOM elements with the `.reveal` class and reveals them sequentially
- * as they enter the viewport threshold.
- */
+// Reveal elements as they enter the viewport
 const revealElements = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(
   (entries) => {
@@ -76,21 +61,18 @@ const observer = new IntersectionObserver(
 revealElements.forEach((element) => observer.observe(element));
 
 /* ==========================================================================
-   3. Interactive Freight Quote Form & WhatsApp Serializer
+   3. Quote Form & WhatsApp Serializer
    ========================================================================== */
 
-/**
- * Form inputs and feedback containers for the freight rate quote engine.
- */
+// Quote form elements
 const quoteForm = document.getElementById('quote-form');
 const btnQuoteWhatsApp = document.getElementById('btn-quote-whatsapp');
 const quoteFeedback = document.getElementById('quote-feedback');
 
 /**
- * Serializes values from the quotation form into a structured, readable message
- * optimized for direct dispatch to WhatsApp Business advisors.
+ * Builds formatted text message from quote form inputs.
  *
- * @returns {string} Formatted plain-text payload for messaging.
+ * @returns {string} Formatted text message for WhatsApp.
  */
 function buildQuoteMessage() {
   const name = document.getElementById('quote-name')?.value.trim() || '';
@@ -112,10 +94,7 @@ function buildQuoteMessage() {
 }
 
 if (quoteForm) {
-  /**
-   * Handles quote form submission: prevents default page reload, builds
-   * WhatsApp URI payload, and displays a user feedback notification card.
-   */
+  // Handle form submission and prepare WhatsApp message
   quoteForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const msg = buildQuoteMessage();
@@ -136,10 +115,7 @@ if (quoteForm) {
 }
 
 if (btnQuoteWhatsApp) {
-  /**
-   * Direct trigger button: immediately prepares the serialized quotation and
-   * opens WhatsApp in a new browser tab.
-   */
+  // Open WhatsApp with form data on direct button click
   btnQuoteWhatsApp.addEventListener('click', () => {
     const msg = buildQuoteMessage();
     const waUrl = `https://wa.me/?text=${encodeURIComponent(msg)}`;
@@ -148,13 +124,10 @@ if (btnQuoteWhatsApp) {
 }
 
 /* ==========================================================================
-   4. Header Scroll State (Elevation & Backdrop Enhancement)
+   4. Header Scroll State
    ========================================================================== */
 
-/**
- * Adds an elevation shadow and increased blur opacity to the sticky navbar
- * once the user scrolls beyond the top threshold (20px).
- */
+// Add shadow to header when page is scrolled
 const siteHeader = document.querySelector('.site-header');
 if (siteHeader) {
   const handleScroll = () => {
@@ -169,14 +142,10 @@ if (siteHeader) {
 }
 
 /* ==========================================================================
-   5. Clipboard Copy Utility with Resilient Fallback
+   5. Clipboard Copy Utility
    ========================================================================== */
 
-/**
- * Copies the text specified in `data-copy` to the user's system clipboard.
- * Features asynchronous modern Clipboard API with legacy fallback for
- * restricted or older browser security contexts.
- */
+// Copy text to clipboard with fallback for older browsers
 const copyButtons = document.querySelectorAll('.btn-copy');
 copyButtons.forEach((btn) => {
   btn.addEventListener('click', async () => {
@@ -194,7 +163,7 @@ copyButtons.forEach((btn) => {
         btn.classList.remove('is-copied');
       }, 2000);
     } catch (err) {
-      // Legacy fallback for environments where Clipboard API is restricted
+      // Fallback for browsers without Clipboard API support
       const tempInput = document.createElement('input');
       tempInput.value = textToCopy;
       document.body.appendChild(tempInput);
@@ -215,20 +184,16 @@ copyButtons.forEach((btn) => {
 });
 
 /* ==========================================================================
-   6. Fleet Catalog Interactive Category Filters
+   6. Fleet Category Filters
    ========================================================================== */
 
-/**
- * Filter buttons and card elements for technical equipment categories
- * (Dry Vans, Flatbeds, Specialized Heavy Haul, Bulk & Intermodal).
- */
+// Filter fleet cards by category
 const fleetFilterBtns = document.querySelectorAll('.fleet-filter-btn');
 const fleetCards = document.querySelectorAll('.fleet-card[data-category]');
 
 if (fleetFilterBtns.length && fleetCards.length) {
   fleetFilterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-      // Update active pill state
       fleetFilterBtns.forEach((b) => b.classList.remove('is-active'));
       btn.classList.add('is-active');
 
@@ -248,13 +213,10 @@ if (fleetFilterBtns.length && fleetCards.length) {
 }
 
 /* ==========================================================================
-   7. Fleet Card Quick-Quote Synchronizer
+   7. Fleet Card Quick-Quote Link
    ========================================================================== */
 
-/**
- * When clicking "Cotizar este equipo" on any fleet card, this automatically
- * maps the unit code to the service dropdown selector in the quote section.
- */
+// Pre-select unit in quote form when clicking 'Cotizar este equipo'
 const quoteUnitBtns = document.querySelectorAll('.btn-card-quote');
 const quoteServiceSelect = document.getElementById('quote-service');
 
@@ -276,12 +238,10 @@ if (quoteUnitBtns.length && quoteServiceSelect) {
 }
 
 /* ==========================================================================
-   8. Direct Contact Channels Modal Dialog & Quote Navigation Controller
+   8. Direct Contact Modal
    ========================================================================== */
 
-/**
- * DOM references for modal dialog elements and navigation triggers.
- */
+// Modal DOM elements
 const btnNavContact = document.getElementById('btn-nav-contact');
 const btnNavQuote = document.getElementById('btn-nav-quote');
 const contactModal = document.getElementById('contact-modal');
@@ -289,10 +249,7 @@ const modalClose = document.getElementById('modal-close');
 const modalGotoQuote = document.getElementById('modal-goto-quote');
 const quoteNameInput = document.getElementById('quote-name');
 
-/**
- * Opens the Direct Contact modal dialog, locks body scroll, updates ARIA
- * state, and transfers focus to the dialog close control.
- */
+// Open modal dialog
 function openContactModal() {
   if (!contactModal) return;
   contactModal.classList.add('is-open');
@@ -301,10 +258,7 @@ function openContactModal() {
   modalClose?.focus();
 }
 
-/**
- * Dismisses the Direct Contact modal dialog, restores body scroll, updates
- * ARIA state, and returns focus to the initiating navbar trigger button.
- */
+// Close modal dialog
 function closeContactModal() {
   if (!contactModal) return;
   contactModal.classList.remove('is-open');
@@ -313,7 +267,7 @@ function closeContactModal() {
   btnNavContact?.focus();
 }
 
-// Attach modal opener to navbar "Contacto" action button
+// Open modal when clicking navbar 'Contacto'
 if (btnNavContact) {
   btnNavContact.addEventListener('click', (e) => {
     e.preventDefault();
@@ -321,14 +275,14 @@ if (btnNavContact) {
   });
 }
 
-// Attach modal dismisser to close button
+// Close modal when clicking close button
 if (modalClose) {
   modalClose.addEventListener('click', () => {
     closeContactModal();
   });
 }
 
-// Dismiss modal when clicking on the surrounding backdrop
+// Close modal when clicking backdrop
 if (contactModal) {
   contactModal.addEventListener('click', (e) => {
     if (e.target === contactModal) {
@@ -337,14 +291,14 @@ if (contactModal) {
   });
 }
 
-// Dismiss modal when pressing the Escape key
+// Close modal on Escape key
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && contactModal?.classList.contains('is-open')) {
     closeContactModal();
   }
 });
 
-// Modal footer link: smoothly jumps from modal dialog down to the quotation form
+// Jump from modal to quote form
 if (modalGotoQuote) {
   modalGotoQuote.addEventListener('click', (e) => {
     e.preventDefault();
@@ -359,7 +313,7 @@ if (modalGotoQuote) {
   });
 }
 
-// Navbar "Cotizar" action button: smooth scroll to quotation form and auto-focus
+// Navbar 'Cotizar' button: scroll to form and focus name input
 if (btnNavQuote) {
   btnNavQuote.addEventListener('click', (e) => {
     const contactSection = document.getElementById('contact');
