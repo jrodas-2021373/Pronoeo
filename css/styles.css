@@ -24,14 +24,13 @@
  * 13. MESOAMERICAN FREIGHT CORRIDORS & COVERAGE SECTION
  * 14. OPERATIONAL WORKFLOW TIMELINE
  * 15. STRATEGIC INDUSTRY VERTICALS & SECTORS LEDGER
- * 16. TESTIMONIALS & SOCIAL PROOF GRID
- * 17. GLOBAL SITE FOOTER & LEGAL ATTRIBUTION
- * 18. COMMERCIAL CONTACT & FREIGHT QUOTATION ENGINE
- * 19. CONTACT INFORMATION & PHYSICAL HEADQUARTERS CARD
- * 20. FLOATING WHATSAPP QUICK-ACTION BUTTON
- * 21. SCROLL-TRIGGERED REVEAL ANIMATIONS
- * 22. DIRECT CONTACT CHANNELS MODAL DIALOG
- * 23. RESPONSIVE MEDIA QUERIES (980px, 768px, 640px)
+ * 16. GLOBAL SITE FOOTER & LEGAL ATTRIBUTION
+ * 17. COMMERCIAL CONTACT & FREIGHT QUOTATION ENGINE
+ * 18. CONTACT INFORMATION & PHYSICAL HEADQUARTERS CARD
+ * 19. FLOATING WHATSAPP QUICK-ACTION BUTTON
+ * 20. SCROLL-TRIGGERED REVEAL ANIMATIONS
+ * 21. DIRECT CONTACT CHANNELS MODAL DIALOG
+ * 22. RESPONSIVE MEDIA QUERIES (980px, 768px, 640px)
  * ============================================================================
  */
 
@@ -39,13 +38,8 @@
    1. Design Tokens & System Variables
    ========================================================================== */
 :root {
-  --bg: #f8fafc;
-  --bg-elevated: #ffffff;
   --bg-soft: #f1f5f9;
-  --panel: rgba(255, 255, 255, 0.88);
-  --panel-strong: #ffffff;
   --card: #ffffff;
-  --card-alt: #f8fafc;
   --muted: #64748b;
   --muted-2: #334155;
   --text: #0f172a;
@@ -209,31 +203,13 @@ p {
   filter: brightness(0);
 }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
-  color: #fff;
-  box-shadow: 0 12px 24px rgba(46, 80, 119, 0.22);
-}
-
-.brand-text {
-  font-size: 0.95rem;
-}
-
 .brand-name {
   color: var(--text);
   font-family: "Manrope", sans-serif;
   font-weight: 800;
+  font-size: 0.95rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-.brand-name {
-  font-size: 0.95rem;
 }
 
 .nav-panel {
@@ -321,16 +297,14 @@ p {
   box-shadow: 0 14px 30px rgba(2, 132, 199, 0.38);
 }
 
-.btn-secondary,
-.btn-ghost {
+.btn-secondary {
   border: 1px solid var(--line-strong);
   background: #ffffff;
   color: var(--primary-strong);
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
 }
 
-.btn-secondary:hover,
-.btn-ghost:hover {
+.btn-secondary:hover {
   border-color: var(--primary);
   background: var(--primary-light);
   color: var(--primary);
@@ -455,108 +429,6 @@ p {
   background: rgba(255, 255, 255, 0.22);
   color: #ffffff;
   transform: translateY(-2px);
-}
-
-.showcase-card {
-  position: relative;
-  background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(250,247,242,0.94));
-  border: 1px solid rgba(20, 34, 45, 0.08);
-  border-radius: 30px;
-  box-shadow: var(--shadow-strong);
-  overflow: hidden;
-}
-
-.showcase-card::before {
-  content: "";
-  position: absolute;
-  inset: auto auto 24px 26px;
-  width: 140px;
-  height: 140px;
-  background: radial-gradient(circle, rgba(77, 161, 169, 0.14), rgba(46, 80, 119, 0.04) 60%, transparent 100%);
-  border-radius: 50%;
-  filter: blur(16px);
-}
-
-.showcase-photo {
-  position: relative;
-  height: 410px;
-  overflow: hidden;
-}
-
-.showcase-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.photo-badge {
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 0.8rem;
-  border-radius: 999px;
-  background: rgba(17, 28, 35, 0.66);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: #f4f1ec;
-  font-size: 0.66rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  backdrop-filter: blur(6px);
-}
-
-.showcase-copy {
-  padding: 22px 22px 10px;
-}
-
-.mini-label {
-  display: inline-block;
-  margin-bottom: 10px;
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.showcase-copy p {
-  margin: 0;
-  font-size: 1.03rem;
-  line-height: 1.7;
-  color: var(--muted-2);
-}
-
-.showcase-meta {
-  display: grid;
-  grid-template-columns: 1fr 1.6fr;
-  gap: 18px;
-  padding: 0 22px 22px;
-  border-top: 1px solid rgba(20, 34, 45, 0.08);
-  margin-top: 18px;
-}
-
-.showcase-meta div {
-  padding-top: 18px;
-}
-
-.showcase-meta span {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--muted);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.showcase-meta strong {
-  font-size: 1rem;
-}
-
-.two-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
 }
 
 /* ==========================================================================
@@ -690,7 +562,6 @@ p {
 
 .service-card,
 .fleet-card,
-.testimonial-card,
 .timeline-item {
   background: var(--card);
   border: 1px solid var(--line);
@@ -700,8 +571,7 @@ p {
 }
 
 .service-card:hover,
-.fleet-card:hover,
-.testimonial-card:hover {
+.fleet-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-strong);
   border-color: rgba(2, 132, 199, 0.25);
@@ -1454,51 +1324,7 @@ p {
 }
 
 /* ==========================================================================
-   16. TESTIMONIALS & SOCIAL PROOF GRID
-   ========================================================================== */
-
-/**
- * 3-column card grid for client testimonials and industry stakeholder reviews.
- */
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
-
-.testimonial-card {
-  padding: 24px 22px;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(20, 34, 45, 0.08);
-  border-radius: 22px;
-  box-shadow: var(--shadow);
-}
-
-.testimonial-card p {
-  font-size: 1.04rem;
-  color: var(--muted-2);
-  line-height: 1.6;
-}
-
-.person {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.person strong {
-  font-size: 0.95rem;
-  color: var(--primary-strong);
-}
-
-.person span {
-  color: var(--muted);
-  font-size: 0.82rem;
-}
-
-/* ==========================================================================
-   17. GLOBAL SITE FOOTER & LEGAL ATTRIBUTION
+   16. GLOBAL SITE FOOTER & LEGAL ATTRIBUTION
    ========================================================================== */
 
 .site-footer {
@@ -1582,7 +1408,7 @@ p {
 }
 
 /* ==========================================================================
-   18. COMMERCIAL CONTACT & FREIGHT QUOTATION ENGINE
+   17. COMMERCIAL CONTACT & FREIGHT QUOTATION ENGINE
    ========================================================================== */
 
 /**
@@ -1734,7 +1560,7 @@ p {
 }
 
 /* ==========================================================================
-   19. CONTACT INFORMATION & PHYSICAL HEADQUARTERS CARD
+   18. CONTACT INFORMATION & PHYSICAL HEADQUARTERS CARD
    ========================================================================== */
 
 .info-badge {
@@ -1852,7 +1678,7 @@ p {
 }
 
 /* ==========================================================================
-   20. QUICK-ACTION FLOATING WHATSAPP BUTTON
+   19. QUICK-ACTION FLOATING WHATSAPP BUTTON
    ========================================================================== */
 
 /**
@@ -1882,7 +1708,7 @@ p {
 }
 
 /* ==========================================================================
-   21. SCROLL-TRIGGERED REVEAL ANIMATION UTILITIES
+   20. SCROLL-TRIGGERED REVEAL ANIMATION UTILITIES
    ========================================================================== */
 
 /**
@@ -1900,7 +1726,7 @@ p {
 }
 
 /* ==========================================================================
-   22. DIRECT CONTACT CHANNELS MODAL DIALOG
+   21. DIRECT CONTACT CHANNELS MODAL DIALOG
    ========================================================================== */
 
 /**
@@ -2211,7 +2037,7 @@ p {
 }
 
 /* ==========================================================================
-   23. RESPONSIVE MEDIA QUERIES & FLUID LAYOUT ADAPTERS
+   22. RESPONSIVE MEDIA QUERIES & FLUID LAYOUT ADAPTERS
    ========================================================================== */
 
 /**
@@ -2219,19 +2045,14 @@ p {
  * Reconfigures navigation into a collapsible drawer and collapses multi-column grids.
  */
 @media (max-width: 980px) {
-  .hero-grid,
-  .two-columns,
   .coverage-grid,
   .service-grid,
   .fleet-grid,
   .timeline,
-  .testimonial-grid,
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
 
-  .hero-grid,
-  .two-columns,
   .coverage-grid,
   .contact-grid {
     grid-template-columns: 1fr;
@@ -2326,10 +2147,6 @@ p {
   .fleet-strip {
     grid-template-columns: 1fr 1fr;
     gap: 14px;
-  }
-
-  .testimonial-grid {
-    grid-template-columns: 1fr;
   }
 
   /* Vertical Timeline Layout Transformation */
@@ -2617,7 +2434,6 @@ p {
 
   .service-grid,
   .fleet-grid,
-  .testimonial-grid,
   .footer-grid {
     grid-template-columns: 1fr;
   }
