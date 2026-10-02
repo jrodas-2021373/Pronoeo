@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <!-- ==========================================================================
-     Grupo Pronoeo, S.A. - Corporate Web Application
-     Document: index.html
-     Description: Semantic, high-performance web portal for regional heavy haulage,
-                  cross-border logistics, and customs brokerage across Mesoamerica
-                  (connecting Mexico and Central America through to Panama).
-     Standards: HTML5, WAI-ARIA 1.2, Responsive Mobile-First Architecture.
+     Grupo Pronoeo, S.A.
+     Main website markup (index.html)
      ========================================================================== -->
 <html lang="es">
   <head>
-    <!-- Character Encoding & Responsive Viewport Configuration -->
+    <!-- Character encoding and responsive viewport -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Search Engine Optimization (SEO) & Regional Discoverability -->
+    <!-- SEO and page metadata -->
     <meta
       name="description"
       content="Grupo Pronoeo, S.A. - Operador logístico regional de transporte pesado, logística transfronteriza y trámites aduanales conectando México y toda Centroamérica hasta Panamá."
     />
     <title>Grupo Pronoeo | Transporte Pesado y Logística Regional · México a Panamá</title>
 
-    <!-- Multi-Platform Favicon Suite -->
+    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
 
-    <!-- Google Typography Preconnection & Web Fonts (Inter & Manrope) -->
+    <!-- Web fonts: Inter and Manrope -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,17 +30,17 @@
       rel="stylesheet"
     />
 
-    <!-- Main Design System & Responsive Stylesheet -->
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="./css/styles.css?v=5.5" />
   </head>
   <body>
     <div class="page-shell">
       <!-- ==========================================================================
-           1. Global Header & Accessible Sticky Navigation
+           1. Header & Navigation
            ========================================================================== -->
       <header class="site-header">
         <nav class="nav container" aria-label="Navegación Principal">
-          <!-- Corporate Brand Emblem & Home Anchor -->
+          <!-- Brand logo -->
           <a href="#top" class="brand" aria-label="Pronoeo inicio">
             <img
               class="brand-logo"
@@ -54,7 +50,7 @@
             <span class="brand-name">Pronoeo</span>
           </a>
 
-          <!-- Mobile Hamburger Drawer Toggle (ARIA Integrated) -->
+          <!-- Mobile menu toggle button -->
           <button
             class="menu-toggle"
             id="menu-toggle"
@@ -67,7 +63,7 @@
             <span></span>
           </button>
 
-          <!-- Desktop Navigation Bar & Mobile Drawer Panel -->
+          <!-- Navigation links -->
           <div class="nav-panel" id="nav-panel">
             <div class="nav-links">
               <a href="#about">Nosotros</a>
@@ -76,7 +72,7 @@
               <a href="#coverage">Cobertura</a>
               <a href="#sectors">Sectores</a>
             </div>
-            <!-- Conversion Action Buttons (Differentiated Modal Trigger & Smooth-Scroll) -->
+            <!-- Action buttons -->
             <div class="nav-actions">
               <a class="btn btn-secondary" href="#contact-modal" id="btn-nav-contact" role="button" aria-haspopup="dialog" aria-controls="contact-modal">Contacto</a>
               <a class="btn btn-primary" href="#contact" id="btn-nav-quote">Cotizar</a>
@@ -87,12 +83,10 @@
 
       <main id="top">
         <!-- ==========================================================================
-             2. Ambient Video Hero Section
-             High-definition ambient truck transport video with dark gradient scrim,
-             clean editorial typography, and direct quote request call-to-actions.
+             2. Hero Section (Video Background)
              ========================================================================== -->
         <section class="hero-video-cinematic">
-          <!-- Full-Bleed Video Background Container -->
+          <!-- Video background -->
           <div class="hero-video-container" aria-hidden="true">
             <video
               autoplay
@@ -108,7 +102,7 @@
             <div class="hero-video-scrim"></div>
           </div>
 
-          <!-- Editorial Headline & Conversion Buttons -->
+          <!-- Hero content and actions -->
           <div class="container hero-clean-wrap">
             <div class="hero-copy-clean">
               <p class="eyebrow eyebrow-glass">Operador Logístico Regional · México hasta Panamá</p>
@@ -126,15 +120,12 @@
         </section>
 
         <!-- ==========================================================================
-             3. Corporate Identity & Strategic Operational Pillars ("Nosotros")
-             Historical logistics narrative, headquarters terminal image, and
-             three foundational pillars: Customs anticipation, certified drivers,
-             and active satellite telemetry.
+             3. About Us & Operational Pillars
              ========================================================================== -->
         <section id="about" class="about section-spacing">
           <div class="container">
             <div class="about-top-grid">
-              <!-- Brand Narrative & Value Philosophy -->
+              <!-- Company background -->
               <div class="about-story reveal">
                 <p class="eyebrow eyebrow-dark">Sobre Grupo Pronoeo</p>
                 <h2>Logística regional, transporte pesado y aduanas con disciplina operativa.</h2>
@@ -146,7 +137,7 @@
                 </p>
               </div>
 
-              <!-- Logistics Terminal & Operations Yard Asset -->
+              <!-- Operations yard photo -->
               <div class="about-visual reveal">
                 <div class="about-image-frame">
                   <img
@@ -158,7 +149,7 @@
               </div>
             </div>
 
-            <!-- Three Foundational Operational Pillars -->
+            <!-- Operational pillars -->
             <div class="about-pillars-grid reveal">
               <div class="pillar-card">
                 <span class="pillar-icon">01</span>
@@ -188,10 +179,7 @@
         </section>
 
         <!-- ==========================================================================
-             4. Specialized Logistics & Customs Brokerage Services
-             Six modular service articles detailing cross-border heavy transport,
-             Mexico southern border logistics, Central America deliveries, Costa Rica
-             and Panama connectivity, DUCA-T customs brokerage, and port drayage.
+             4. Services Grid
              ========================================================================== -->
         <section id="services" class="services section-spacing">
           <div class="container">
@@ -200,7 +188,7 @@
               <h2>Soluciones integrales de transporte y logística regional.</h2>
             </div>
 
-            <!-- Six-Column / Two-Row Service Portfolio Grid -->
+            <!-- Services list -->
             <div class="service-grid">
               <article class="service-card reveal">
                 <div class="service-icon" aria-hidden="true">
@@ -276,13 +264,11 @@
         </section>
 
         <!-- ==========================================================================
-             5. Technical Fleet Catalog & Equipment Specifications
-             Comprehensive 10-unit equipment catalog complying with SIECA / SCT weights
-             and dimensions standards, with live telemetry badges and quick quote links.
+             5. Fleet Catalog & Technical Specifications
              ========================================================================== -->
         <section id="fleet" class="fleet section-spacing">
           <div class="container">
-            <!-- Section Header -->
+            <!-- Section heading -->
             <div class="section-heading reveal">
               <p class="eyebrow eyebrow-dark">Catálogo de Flota & Fichas Técnicas</p>
               <h2>Equipos especializados configurados para la industria y comercio exterior.</h2>
@@ -291,7 +277,7 @@
               </p>
             </div>
 
-            <!-- Fleet Operational Credentials & Security Capabilities Strip -->
+            <!-- Fleet credentials strip -->
             <div class="fleet-strip reveal">
               <div class="fleet-strip-item">
                 <span class="fleet-strip-icon">🛡️</span>
@@ -323,7 +309,7 @@
               </div>
             </div>
 
-            <!-- Interactive Category Filter Tabs -->
+            <!-- Fleet category filters -->
             <div class="fleet-filters reveal">
               <button type="button" class="fleet-filter-btn is-active" data-filter="all">Todos los Equipos (10)</button>
               <button type="button" class="fleet-filter-btn" data-filter="dry-van">Furgones y Refrigerados (3)</button>
@@ -332,9 +318,9 @@
               <button type="button" class="fleet-filter-btn" data-filter="intermodal">Portuario y Tracción (2)</button>
             </div>
 
-            <!-- Technical Fleet Equipment Grid (2 Columns Desktop) -->
+            <!-- Fleet equipment grid (2 columns on desktop) -->
             <div class="fleet-grid">
-              <!-- Equipment Unit 01: 53-Foot High-Cube Dry Van (FUR-53) -->
+              <!-- Unit 01: Dry Van 53ft (FUR-53) -->
               <article class="fleet-card reveal" data-category="dry-van">
                 <div class="fleet-image">
                   <span class="fleet-badge">ALTA CAPACIDAD · 53 FT</span>
@@ -376,7 +362,7 @@
                 </div>
               </article>
 
-              <!-- Equipment Unit 02: 48-Foot Standard Dry Van (FUR-48) -->
+              <!-- Unit 02: Dry Van 48ft (FUR-48) -->
               <article class="fleet-card reveal" data-category="dry-van">
                 <div class="fleet-image">
                   <span class="fleet-badge">VERSATILIDAD · 48 FT</span>
@@ -418,7 +404,7 @@
                 </div>
               </article>
 
-              <!-- Equipment Unit 03: 53-Foot Refrigerated Cold-Chain Van (REF-53) -->
+              <!-- Unit 03: Refrigerated Van 53ft (REF-53) -->
               <article class="fleet-card reveal" data-category="dry-van">
                 <div class="fleet-image">
                   <span class="fleet-badge">TEMPERATURA CONTROLADA</span>
@@ -460,7 +446,7 @@
                 </div>
               </article>
 
-              <!-- Equipment Unit 04: Tandem 2-Axle Heavy Industrial Flatbed (PLA-2E) -->
+              <!-- Unit 04: 2-Axle Flatbed (PLA-2E) -->
               <article class="fleet-card reveal" data-category="platform">
                 <div class="fleet-image">
                   <span class="fleet-badge">TÁNDEM · 40' Y 48'</span>
@@ -502,7 +488,7 @@
                 </div>
               </article>
 
-              <!-- Equipment Unit 05: Tridem 3-Axle Heavy Industrial Flatbed (PLA-3E) -->
+              <!-- Unit 05: 3-Axle Flatbed (PLA-3E) -->
               <article class="fleet-card reveal" data-category="platform">
                 <div class="fleet-image">
                   <span class="fleet-badge">TRIDEM · MÁXIMO PESO LEGAL</span>
@@ -544,7 +530,7 @@
                 </div>
               </article>
 
-              <!-- Equipment Unit 06: Heavy Telescopic Extendable Flatbed (EXT-TEL) -->
+              <!-- Unit 06: Extendable Flatbed (EXT-TEL) -->
               <article class="fleet-card reveal" data-category="platform">
                 <div class="fleet-image">
                   <span class="fleet-badge">TELESCRÓPICA EXTENSIBLE</span>
@@ -586,7 +572,7 @@
                 </div>
               </article>
 
-              <!-- Equipment Unit 07: Lowboy RGN Removable Gooseneck Trailer (LOW-RGN) -->
+              <!-- Unit 07: Lowboy (LOW-RGN) -->
               <article class="fleet-card reveal" data-category="special">
                 <div class="fleet-image">
                   <span class="fleet-badge">CAMA BAJA · RGN</span>
@@ -628,7 +614,7 @@
                 </div>
               </article>
 
-              <!-- Equipment Unit 08: Bottom-Dump Agricultural & Industrial Hopper (GRA-TOL) -->
+              <!-- Unit 08: Bulk Hopper (GRA-TOL) -->
               <article class="fleet-card reveal" data-category="special">
                 <div class="fleet-image">
                   <span class="fleet-badge">GRANELERA · DESCARGA INFERIOR</span>
@@ -670,7 +656,7 @@
                 </div>
               </article>
 
-              <!-- Equipment Unit 09: Skeletal Intermodal Container Chassis (POR-CON) -->
+              <!-- Unit 09: Container Chassis (POR-CON) -->
               <article class="fleet-card reveal" data-category="intermodal">
                 <div class="fleet-image">
                   <span class="fleet-badge">INTERMODAL · PUERTOS</span>
@@ -712,7 +698,7 @@
                 </div>
               </article>
 
-              <!-- Equipment Unit 10: 6x4 Heavy-Duty Tandem Tractor Units (TRA-6x4) -->
+              <!-- Unit 10: Tractor Unit 6x4 (TRA-6x4) -->
               <article class="fleet-card reveal" data-category="intermodal">
                 <div class="fleet-image">
                   <span class="fleet-badge">TRACCIÓN PESADA 6x4</span>
@@ -758,13 +744,11 @@
         </section>
 
         <!-- ==========================================================================
-             6. Mesoamerican Freight Corridors & Regional Coverage
-             Strategic trade route network connecting Mexico to Panama across
-             vital customs border checkpoints and Atlantic / Pacific seaports.
+             6. Regional Coverage & Trade Routes
              ========================================================================== -->
         <section id="coverage" class="coverage section-spacing">
           <div class="container coverage-grid">
-            <!-- Strategic Network Overview & Key Regional Advantages -->
+            <!-- Coverage overview -->
             <div class="coverage-copy reveal">
               <p class="eyebrow eyebrow-dark">Cobertura Regional e Internacional</p>
               <h2>Conexión logística y transporte de carga desde México hasta Panamá.</h2>
@@ -781,7 +765,7 @@
               </ul>
             </div>
 
-            <!-- International Corridors & Port Drayage Card -->
+            <!-- Regional trade routes card -->
             <div class="routes-card reveal">
               <div class="routes-header">
                 <span class="routes-tag">Corredores Mesoamericanos</span>
@@ -838,8 +822,7 @@
         </section>
 
         <!-- ==========================================================================
-             7. Operational Workflow Timeline ("Cómo trabajamos")
-             Four-stage execution pipeline ensuring predictability and cargo security.
+             7. How We Work (Process Timeline)
              ========================================================================== -->
         <section class="process section-spacing">
           <div class="container">
@@ -848,7 +831,7 @@
               <h2>Un proceso claro para entregar seguridad y previsibilidad.</h2>
             </div>
 
-            <!-- Workflow Stage Cards -->
+            <!-- Process steps -->
             <div class="timeline">
               <article class="timeline-item reveal">
                 <div class="step-header">
@@ -887,9 +870,7 @@
         </section>
 
         <!-- ==========================================================================
-             8. Strategic Industry Verticals & Commercial Sectors Ledger
-             Operational specializations across Retail & FMCG, Foreign Trade & Customs,
-             and Maritime Port Operations & Heavy Manufacturing.
+             8. Industry Sectors
              ========================================================================== -->
         <section id="sectors" class="sectors-section section-spacing">
           <div class="container">
@@ -901,9 +882,9 @@
               </p>
             </div>
 
-            <!-- Industry Sectors Ledger Grid -->
+            <!-- Industry sectors list -->
             <div class="sectors-ledger reveal">
-              <!-- Industry Sector 01: Retail & Fast-Moving Consumer Goods (FMCG) -->
+              <!-- Sector 01: Retail & FMCG -->
               <div class="sector-row">
                 <div class="sector-header">
                   <div class="sector-icon-wrap">
@@ -933,7 +914,7 @@
                 </div>
               </div>
 
-              <!-- Industry Sector 02: Foreign Trade & Cross-Border Customs Brokerage -->
+              <!-- Sector 02: Foreign Trade & Customs -->
               <div class="sector-row">
                 <div class="sector-header">
                   <div class="sector-icon-wrap">
@@ -963,7 +944,7 @@
                 </div>
               </div>
 
-              <!-- Industry Sector 03: Maritime Port Operations & Heavy Manufacturing -->
+              <!-- Sector 03: Port Operations & Manufacturing -->
               <div class="sector-row">
                 <div class="sector-header">
                   <div class="sector-icon-wrap">
@@ -997,11 +978,8 @@
           </div>
         </section>
 
-
         <!-- ==========================================================================
-             8. Commercial Contact & Interactive Freight Quotation Engine
-             Interactive rate request form with direct WhatsApp message payload generation,
-             accompanied by verified corporate offices and logistics terminal coordinates.
+             9. Quote Form & Contact Section
              ========================================================================== -->
         <section id="contact" class="contact section-spacing">
           <div class="container">
@@ -1014,7 +992,7 @@
             </div>
 
             <div class="contact-grid">
-              <!-- Interactive Quotation Engine Form Card -->
+              <!-- Quote form -->
               <div class="contact-form-card reveal">
                 <h3>Cotizador exprés</h3>
                 <p>Completa los datos de tu viaje y te atenderemos a la brevedad:</p>
@@ -1082,7 +1060,7 @@
                 </form>
               </div>
 
-              <!-- Corporate Verification & Physical Headquarters Card -->
+              <!-- Contact details and headquarters card -->
               <div class="contact-info-card reveal">
                 <div class="info-badge">Presencia Regional & Sede Central</div>
                 <h3>Grupo Pronoeo, S.A.</h3>
@@ -1151,9 +1129,7 @@
       </main>
 
       <!-- ==========================================================================
-           9. Global Site Footer & Legal Attribution
-           Corporate credentials, regional scope summary, internal navigation,
-           and intellectual property notices.
+           10. Footer
            ========================================================================== -->
       <footer class="site-footer">
         <div class="container footer-grid">
@@ -1201,9 +1177,7 @@
       </footer>
 
       <!-- ==========================================================================
-           10. Direct Contact Channels & Headquarters Modal Dialog
-           Accessible WAI-ARIA modal dialog presenting quick-contact pathways,
-           verified physical coordinates, operation hours, and Facebook portal.
+           11. Direct Contact Modal
            ========================================================================== -->
       <div
         class="modal-backdrop"
@@ -1214,7 +1188,7 @@
         aria-labelledby="modal-contact-title"
       >
         <div class="modal-dialog">
-          <!-- Accessible Dialog Close Button -->
+          <!-- Close button -->
           <button
             type="button"
             class="modal-close"
@@ -1227,7 +1201,7 @@
             </svg>
           </button>
 
-          <!-- Modal Header & Purpose -->
+          <!-- Modal header -->
           <div class="modal-header">
             <span class="modal-badge">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1239,7 +1213,7 @@
             <p class="modal-subtitle">Comunícate de inmediato con nuestros especialistas en logística internacional o visita nuestras sedes.</p>
           </div>
 
-          <!-- Featured Direct WhatsApp Channel Action -->
+          <!-- Direct WhatsApp link -->
           <a
             href="https://wa.me/?text=Hola%2C%20me%20comunico%20desde%20la%20p%C3%A1gina%20web%20de%20Grupo%20Pronoeo%20y%20deseo%20atenci%C3%B3n%20personalizada%20directa."
             target="_blank"
@@ -1258,9 +1232,9 @@
             <span class="modal-wa-arrow" aria-hidden="true">→</span>
           </a>
 
-          <!-- Direct Channels Stack & Action Cards -->
+          <!-- Contact channels list -->
           <div class="modal-channels">
-            <!-- Channel: Central Corporate Headquarters -->
+            <!-- Central offices -->
             <div class="modal-channel-card">
               <div class="modal-channel-icon" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1281,7 +1255,7 @@
               </button>
             </div>
 
-            <!-- Channel: Operations Yard & Logistics Terminal -->
+            <!-- Operations yard -->
             <div class="modal-channel-card">
               <div class="modal-channel-icon" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1305,7 +1279,7 @@
               </button>
             </div>
 
-            <!-- Channel: Commercial Operating Hours -->
+            <!-- Operating hours -->
             <div class="modal-channel-card">
               <div class="modal-channel-icon" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1320,7 +1294,7 @@
               </div>
             </div>
 
-            <!-- Channel: Official Facebook Page -->
+            <!-- Official Facebook page -->
             <div class="modal-channel-card">
               <div class="modal-channel-icon modal-channel-icon-fb" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -1342,7 +1316,7 @@
             </div>
           </div>
 
-          <!-- Modal Footer with Quote Fast Jump Link -->
+          <!-- Link to quote form -->
           <div class="modal-footer-prompt">
             <span>¿Requieres tarifas específicas y disponibilidad de equipos?</span>
             <a href="#contact" class="modal-quote-link" id="modal-goto-quote">
@@ -1357,8 +1331,7 @@
       </div>
 
       <!-- ==========================================================================
-           11. Global Floating WhatsApp Quick Action Button
-           Persistent high-priority trigger for real-time customer support dispatch.
+           12. Floating WhatsApp Button
            ========================================================================== -->
       <a
         href="https://wa.me/?text=Hola%2C%20me%20comunico%20desde%20la%20p%C3%A1gina%20web%20de%20Grupo%20Pronoeo%20y%20deseo%20solicitar%20una%20cotizaci%C3%B3n%20de%20transporte."
@@ -1373,7 +1346,7 @@
     </div>
 
     <!-- ==========================================================================
-         12. Core Application Client JavaScript Bundle
+         13. Scripts
          ========================================================================== -->
     <script src="./js/script.js?v=5.4"></script>
   </body>
