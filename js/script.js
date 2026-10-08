@@ -326,3 +326,67 @@ if (btnNavQuote) {
     }
   });
 }
+
+/* ==========================================================================
+   9. Pilot Recruitment Form & WhatsApp Application
+   ========================================================================== */
+
+const pilotForm = document.getElementById('pilot-form');
+const btnPilotWhatsApp = document.getElementById('btn-pilot-whatsapp');
+const pilotFeedback = document.getElementById('pilot-feedback');
+
+/**
+ * Builds formatted text message from pilot recruitment form inputs.
+ *
+ * @returns {string} Formatted text message for WhatsApp.
+ */
+function buildPilotMessage() {
+  const name = document.getElementById('pilot-name')?.value.trim() || '';
+  const phone = document.getElementById('pilot-phone')?.value.trim() || '';
+  const license = document.getElementById('pilot-license')?.value || '';
+  const experience = document.getElementById('pilot-experience')?.value || '';
+  const borders = document.getElementById('pilot-borders')?.value || '';
+  const city = document.getElementById('pilot-city')?.value.trim() || '';
+
+  let text = `👨‍✈️ *Postulación de Piloto - Grupo Pronoeo*\n\n`;
+  if (name) text += `• *Nombre:* ${name}\n`;
+  if (phone) text += `• *Teléfono/WhatsApp:* ${phone}\n`;
+  if (license) text += `• *Tipo de Licencia:* ${license}\n`;
+  if (experience) text += `• *Años en cabezal:* ${experience}\n`;
+  if (borders) text += `• *Rutas/Fronteras:* ${borders}\n`;
+  if (city) text += `• *Residencia:* ${city}\n`;
+  text += `\n_Hola, deseo aplicar a la convocatoria de pilotos para transporte pesado internacional en Grupo Pronoeo._`;
+
+  return text;
+}
+
+if (pilotForm) {
+  // Handle pilot form submission
+  pilotForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const msg = buildPilotMessage();
+    const waUrl = `https://wa.me/?text=${encodeURIComponent(msg)}`;
+
+    if (pilotFeedback) {
+      pilotFeedback.className = 'quote-feedback is-success';
+      pilotFeedback.style.display = 'block';
+      pilotFeedback.innerHTML = `
+        <strong>¡Postulación lista para enviar!</strong><br>
+        Tus datos han sido registrados en el formato de selección. Presiona el botón a continuación para enviarlos directamente por WhatsApp al equipo de Recursos Humanos:<br><br>
+        <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="padding: 0.75rem 1.4rem; font-size: 0.92rem; text-decoration: none;">
+          Enviar postulación por WhatsApp
+        </a>
+      `;
+    }
+  });
+}
+
+if (btnPilotWhatsApp) {
+  // Direct WhatsApp click for pilots
+  btnPilotWhatsApp.addEventListener('click', () => {
+    const msg = buildPilotMessage();
+    const waUrl = `https://wa.me/?text=${encodeURIComponent(msg)}`;
+    window.open(waUrl, '_blank', 'noopener,noreferrer');
+  });
+}
+
