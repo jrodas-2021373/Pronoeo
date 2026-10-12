@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==========================================================================
+     sitemap.xml - Grupo Pronoeo, S.A.
+     Directorio de rastreo para Google Search Console y motores de búsqueda.
+     ========================================================================== -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 1. Página Principal Corporativa: Servicios, Flota, Aduanas y Cotizaciones -->
+  <url>
+    <loc>https://grupopronoeo.com/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 2. Portal Dedicado: Bolsa de Empleo y Convocatoria de Pilotos Internacionales -->
+  <url>
+    <loc>https://grupopronoeo.com/pilotos.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+</urlset>
