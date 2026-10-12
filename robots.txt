@@ -1,0 +1,11 @@
+# ==============================================================================
+# robots.txt for Grupo Pronoeo, S.A.
+# Website: https://grupopronoeo.com
+# Description: Search engine crawling directives and sitemap declaration.
+# ==============================================================================
+
+User-agent: *
+Allow: /
+
+# Canonical sitemap declaration
+Sitemap: https://grupopronoeo.com/sitemap.xml
