@@ -291,8 +291,28 @@ document.addEventListener('DOMContentLoaded', () => {
       const role = getActiveRole();
       const isMechanic = role === 'mechanic';
       const name = document.getElementById('portal-name')?.value.trim() || '';
-      const phone = document.getElementById('portal-phone')?.value.trim() || '';
+      const phoneInput = document.getElementById('portal-phone');
+      const phone = phoneInput?.value.trim() || '';
       const city = document.getElementById('portal-city')?.value.trim() || '';
+
+      // Validate phone number: minimum 8 digits (standard in GT and Central America)
+      const phoneDigits = phone.replace(/\D/g, '');
+      if (phoneDigits.length < 8) {
+        if (pilotFeedback) {
+          pilotFeedback.className = 'quote-feedback is-warning';
+          pilotFeedback.style.display = 'block';
+          pilotFeedback.innerHTML = `
+            <div class="feedback-badge" style="background: rgba(245, 158, 11, 0.2); color: #b45309;">⚠️ Validación de Contacto</div>
+            <h4 style="margin: 4px 0 6px; color: #854d0e; font-size: 0.98rem;">Número de teléfono incompleto</h4>
+            <p style="margin: 0; color: #713f12; font-size: 0.88rem;">
+              Por favor ingresa un número de teléfono válido (mínimo 8 dígitos) para que Recursos Humanos pueda coordinar tu entrevista.
+            </p>
+          `;
+          pilotFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        if (phoneInput) phoneInput.focus();
+        return;
+      }
 
       const folioPrefix = isMechanic ? 'MEC' : 'PIL';
       const folio = window.PronoeoUtils?.generateFolio(folioPrefix) || `#${folioPrefix}-26-${Math.floor(1000 + Math.random() * 9000)}`;
