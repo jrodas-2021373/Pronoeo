@@ -208,6 +208,7 @@ p {
   font-size: 0.95rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .nav-panel {
@@ -2633,6 +2634,11 @@ p {
     opacity: 0;
     transform: translateY(-8px);
     transition: opacity 0.25s ease, transform 0.25s ease;
+    max-height: calc(100vh - 90px);
+    max-height: calc(100dvh - 90px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 100;
   }
 
   .nav-panel.is-open {
@@ -2795,8 +2801,18 @@ p {
     margin-bottom: 14px;
   }
 
+  .brand {
+    gap: 8px;
+  }
+
   .brand-logo {
-    height: 44px;
+    height: 40px;
+  }
+
+  .brand-name {
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
   }
 
   .hero-video-cinematic {

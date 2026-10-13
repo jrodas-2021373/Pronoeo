@@ -170,6 +170,20 @@ window.PronoeoUtils = {
     if (typeof window.gtag === 'function') {
       window.gtag('event', eventName, eventParams);
     }
+  },
+
+  /**
+   * Registra el Service Worker oficial para capacidades PWA e instalación en dispositivos móviles.
+   */
+  initServiceWorker() {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .catch((err) => {
+            console.warn('[Pronoeo PWA] Service Worker registration skipped:', err);
+          });
+      });
+    }
   }
 };
 
@@ -203,10 +217,11 @@ window.PronoeoAdmin = {
   }
 };
 
-// Sincroniza enlaces de WhatsApp e inicializa analítica en cuanto el DOM esté listo
+// Sincroniza enlaces de WhatsApp, analítica y Service Worker en cuanto el DOM esté listo
 function startupPronoeoConfig() {
   window.PronoeoUtils.syncStaticWhatsAppLinks();
   window.PronoeoUtils.initGoogleAnalytics();
+  window.PronoeoUtils.initServiceWorker();
 }
 
 if (document.readyState === 'loading') {

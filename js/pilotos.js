@@ -139,6 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
     return checked ? checked.value : 'pilot';
   }
 
+  let isInitialLoad = true;
+
   function syncRoleTabs(role) {
     roleTabBtns.forEach((btn) => {
       const isTarget = btn.getAttribute('data-role-tab') === role;
@@ -147,12 +149,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (panelPilot && panelMechanic) {
-      if (role === 'pilot') {
-        panelPilot.classList.add('is-active');
-        panelMechanic.classList.remove('is-active');
-      } else {
-        panelPilot.classList.remove('is-active');
-        panelMechanic.classList.add('is-active');
+      const activePanel = role === 'pilot' ? panelPilot : panelMechanic;
+      const inactivePanel = role === 'pilot' ? panelMechanic : panelPilot;
+
+      inactivePanel.classList.remove('is-active');
+      activePanel.classList.add('is-active');
+
+      // Re-trigger cascading reveals when user switches role tabs
+      if (!isInitialLoad) {
+        const staggers = activePanel.querySelectorAll('.stagger-group');
+        staggers.forEach((grp) => {
+          grp.classList.remove('is-visible');
+          void grp.offsetWidth; // Force DOM reflow to restart CSS animation
+          grp.classList.add('is-visible');
+        });
+
+        const reveals = activePanel.querySelectorAll('.scroll-reveal');
+        reveals.forEach((rev) => {
+          rev.classList.remove('is-visible');
+          void rev.offsetWidth; // Force DOM reflow
+          rev.classList.add('is-visible');
+        });
       }
     }
   }
@@ -225,6 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize initial role state
   setRole('pilot');
+  isInitialLoad = false;
 
   /* ==========================================================================
      3. Recruitment Form Dispatcher & WhatsApp Generator
@@ -291,8 +309,28 @@ document.addEventListener('DOMContentLoaded', () => {
       const role = getActiveRole();
       const isMechanic = role === 'mechanic';
       const name = document.getElementById('portal-name')?.value.trim() || '';
-      const phone = document.getElementById('portal-phone')?.value.trim() || '';
+      const phoneInput = document.getElementById('portal-phone');
+      const phone = phoneInput?.value.trim() || '';
       const city = document.getElementById('portal-city')?.value.trim() || '';
+
+      // Validate phone number: minimum 8 digits (standard in GT and Central America)
+      const phoneDigits = phone.replace(/\D/g, '');
+      if (phoneDigits.length < 8) {
+        if (pilotFeedback) {
+          pilotFeedback.className = 'quote-feedback is-warning';
+          pilotFeedback.style.display = 'block';
+          pilotFeedback.innerHTML = `
+            <div class="feedback-badge" style="background: rgba(245, 158, 11, 0.2); color: #b45309;">⚠️ Validación de Contacto</div>
+            <h4 style="margin: 4px 0 6px; color: #854d0e; font-size: 0.98rem;">Número de teléfono incompleto</h4>
+            <p style="margin: 0; color: #713f12; font-size: 0.88rem;">
+              Por favor ingresa un número de teléfono válido (mínimo 8 dígitos) para que Recursos Humanos pueda coordinar tu entrevista.
+            </p>
+          `;
+          pilotFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        if (phoneInput) phoneInput.focus();
+        return;
+      }
 
       const folioPrefix = isMechanic ? 'MEC' : 'PIL';
       const folio = window.PronoeoUtils?.generateFolio(folioPrefix) || `#${folioPrefix}-26-${Math.floor(1000 + Math.random() * 9000)}`;
@@ -512,4 +550,36 @@ document.addEventListener('DOMContentLoaded', () => {
       closePortalPrivacy();
     }
   });
+
+  /* ==========================================================================
+     5. Scroll-Driven Reveal Observer (Smooth High-Performance Intersection)
+     ========================================================================== */
+  const animatedElements = document.querySelectorAll(
+    '.scroll-reveal, .scroll-reveal-scale, .stagger-group'
+  );
+
+  if ('IntersectionObserver' in window) {
+    const scrollObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            // Unobserve static elements once visible to conserve CPU cycles
+            if (!entry.target.closest('.portal-role-panel')) {
+              scrollObserver.unobserve(entry.target);
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      }
+    );
+
+    animatedElements.forEach((el) => scrollObserver.observe(el));
+  } else {
+    // Graceful fallback for legacy browsers without IntersectionObserver
+    animatedElements.forEach((el) => el.classList.add('is-visible'));
+  }
 });

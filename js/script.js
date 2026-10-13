@@ -104,11 +104,31 @@ if (quoteForm) {
     e.preventDefault();
 
     const name = document.getElementById('quote-name')?.value.trim() || '';
-    const phone = document.getElementById('quote-phone')?.value.trim() || '';
+    const phoneInput = document.getElementById('quote-phone');
+    const phone = phoneInput?.value.trim() || '';
     const email = document.getElementById('quote-email')?.value.trim() || '';
     const service = document.getElementById('quote-service')?.value || '';
     const route = document.getElementById('quote-route')?.value.trim() || '';
     const message = document.getElementById('quote-message')?.value.trim() || '';
+
+    // Validate phone number: minimum 8 digits (standard in GT and Central America)
+    const phoneDigits = phone.replace(/\D/g, '');
+    if (phoneDigits.length < 8) {
+      if (quoteFeedback) {
+        quoteFeedback.className = 'quote-feedback is-warning';
+        quoteFeedback.style.display = 'block';
+        quoteFeedback.innerHTML = `
+          <div class="feedback-badge" style="background: rgba(245, 158, 11, 0.2); color: #b45309;">⚠️ Validación de Contacto</div>
+          <h4 style="margin: 4px 0 6px; color: #854d0e; font-size: 0.98rem;">Número de teléfono incompleto</h4>
+          <p style="margin: 0; color: #713f12; font-size: 0.88rem;">
+            Por favor ingresa un número de teléfono válido (mínimo 8 dígitos) para poder coordinar tu cotización logística.
+          </p>
+        `;
+        quoteFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+      if (phoneInput) phoneInput.focus();
+      return;
+    }
 
     // Generate executive tracking folio
     const folio = window.PronoeoUtils?.generateFolio('GPN') || `#GPN-26-${Math.floor(1000 + Math.random() * 9000)}`;
