@@ -260,17 +260,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const borders = document.getElementById('portal-borders')?.value || '';
     const city = document.getElementById('portal-city')?.value.trim() || '';
 
-    let text = `👨‍✈️ *Postulación: Piloto de Cabezal - Grupo Pronoeo*\n`;
+    let text = `👨‍✈️ *Postulación: Piloto de Cabezal y Camión 12t - Grupo Pronoeo*\n`;
     if (folio) text += `🔖 *Folio:* ${folio}\n\n`;
     else text += `\n`;
 
     if (name) text += `• *Nombre:* ${name}\n`;
     if (phone) text += `• *Teléfono/WhatsApp:* ${phone}\n`;
     if (license) text += `• *Licencia:* ${license}\n`;
-    if (experience) text += `• *Experiencia en cabezal:* ${experience}\n`;
-    if (borders) text += `• *Fronteras/Aduanas:* ${borders}\n`;
+    if (experience) text += `• *Experiencia en transporte pesado:* ${experience}\n`;
+    if (borders) text += `• *Pasaporte / Ruta Centroamérica:* ${borders}\n`;
     if (city) text += `• *Residencia:* ${city}\n`;
-    text += `\n_Hola, deseo aplicar a la convocatoria de pilotos de transporte pesado internacional en Grupo Pronoeo._`;
+    text += `\n_Hola, deseo aplicar a la convocatoria de pilotos (cabezal y camión 12t) en Grupo Pronoeo._`;
 
     return text;
   }
@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let leadData = {
         folio,
-        role: isMechanic ? 'Mecánico Diésel de Flota' : 'Piloto de Cabezal',
+        role: isMechanic ? 'Mecánico Diésel de Flota' : 'Piloto de Cabezal y Camión 12t',
         applied_position: role,
         name,
         phone,
@@ -390,7 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const endpoint = window.PRONOEO_CONFIG?.recruitmentEmailEndpoint;
-      const roleTitle = isMechanic ? 'Mecánico Diésel' : 'Piloto de Cabezal';
+      const roleTitle = isMechanic ? 'Mecánico Diésel' : 'Piloto de Cabezal y Camión 12t';
 
       if (endpoint && endpoint.startsWith('http')) {
         try {
