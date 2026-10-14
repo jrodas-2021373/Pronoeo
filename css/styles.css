@@ -557,6 +557,59 @@ p {
   transform: scale(1.03);
 }
 
+/* Institutional Metrics Strip (Generación de Empleo & Trayectoria) */
+.about-stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 36px;
+  padding: 26px 28px;
+  background: linear-gradient(135deg, rgba(24, 24, 27, 0.04) 0%, rgba(24, 24, 27, 0.01) 100%);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 18px rgba(9, 9, 11, 0.03);
+}
+
+.about-stat-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 4px 14px;
+}
+
+.about-stat-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: var(--line-strong);
+  opacity: 0.6;
+}
+
+.about-stat-number {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 800;
+  color: var(--primary-strong);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.about-stat-label {
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 5px;
+}
+
+.about-stat-sub {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
 /* Operational pillars grid */
 .about-pillars-grid {
   display: grid;
@@ -1305,7 +1358,116 @@ p {
 }
 
 /* ==========================================================================
-   15. Industry Sectors
+   14.1 Operational Permits & Regulatory Compliance
+   ========================================================================== */
+.permits-section {
+  background: linear-gradient(180deg, #fbfbfb 0%, #f4f4f5 100%);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.permits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-top: 38px;
+}
+
+.permit-card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 24px;
+  background: #ffffff;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+}
+
+.permit-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(24, 24, 27, 0.35);
+  box-shadow: var(--shadow-strong);
+}
+
+.permit-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.permit-badge-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--primary-light);
+  border: 1px solid rgba(24, 24, 27, 0.15);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.permit-card:hover .permit-badge-icon {
+  background: var(--primary);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.permit-status-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary-strong);
+  background: rgba(24, 24, 27, 0.06);
+  border: 1px solid rgba(24, 24, 27, 0.12);
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.permit-card h3 {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: var(--primary-strong);
+  margin: 0 0 10px;
+  line-height: 1.35;
+}
+
+.permit-card p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--muted-2);
+  margin: 0 0 18px;
+  flex-grow: 1;
+}
+
+.permit-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.permit-tag {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: #f4f4f5;
+  border: 1px solid var(--line);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+/* ==========================================================================
+   15. Lo que Movemos (Industry Cargo Ledger)
    ========================================================================== */
 
 .section-lead {
@@ -2759,6 +2921,23 @@ p {
     margin-top: 26px;
   }
 
+  .about-stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    padding: 22px 20px;
+    margin-top: 28px;
+  }
+
+  .about-stat-item:nth-child(2)::after {
+    display: none;
+  }
+
+  .permits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 28px;
+  }
+
   .dedicated-projects-banner {
     flex-direction: column;
     align-items: flex-start;
@@ -2799,6 +2978,31 @@ p {
     height: 40px;
     font-size: 0.90rem;
     margin-bottom: 14px;
+  }
+
+  .about-stats-strip {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 18px 16px;
+    margin-top: 22px;
+  }
+
+  .about-stat-item {
+    padding: 4px 6px;
+  }
+
+  .about-stat-item::after {
+    display: none !important;
+  }
+
+  .permits-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 22px;
+  }
+
+  .permit-card {
+    padding: 22px 18px;
   }
 
   .brand {
