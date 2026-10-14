@@ -20,11 +20,11 @@ window.PRONOEO_CONFIG = {
   whatsappCommercial: '',
 
   /**
-   * 2. WHATSAPP RECURSOS HUMANOS (Convocatoria y reclutamiento de pilotos)
-   * Ejemplo: '502XXXXXXXX' (puede ser el mismo comercial o uno exclusivo de RRHH).
-   * Deja vacío '' mientras no se entregue el número oficial.
+   * 2. WHATSAPP RECURSOS HUMANOS (Convocatoria y reclutamiento de pilotos y mecánicos)
+   * Número oficial proporcionado para atención a postulantes (+502 3566-7071).
+   * Línea de respaldo: +502 4211-0054
    */
-  whatsappRecruitment: '',
+  whatsappRecruitment: '50235667071',
 
   /**
    * 3. RECEPCIÓN DE COTIZACIONES POR CORREO (Endpoint de servicio)
@@ -45,7 +45,7 @@ window.PRONOEO_CONFIG = {
    * 5. DATOS DE CONTACTO CORPORATIVO VISIBLES
    */
   publicEmail: 'cotizaciones@grupopronoeo.com',
-  publicPhone: '+502 2400-0000',
+  publicPhone: '',
   publicAddress: 'Guatemala, C.A.',
   operationsHub: 'Guatemala (Operaciones y Despacho Regional)',
 

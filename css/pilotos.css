@@ -451,7 +451,7 @@ html {
 
 .portal-perks-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
   margin-bottom: 48px;
   position: relative;
@@ -1513,8 +1513,8 @@ html {
 
 @media (max-width: 980px) {
   .portal-perks-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
   }
 
   .portal-hero-showcase {
@@ -1631,6 +1631,11 @@ html {
   .btn-portal-hero-sub {
     width: 100%;
     justify-content: center;
+  }
+
+  .portal-perks-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .portal-role-switcher {
