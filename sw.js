@@ -3,13 +3,13 @@
  * Habilita capacidades de Progressive Web App (PWA), instalación móvil y carga ultra rápida en carretera.
  */
 
-const CACHE_NAME = 'pronoeo-cache-v1.6';
+const CACHE_NAME = 'pronoeo-cache-v1.7';
 
 const PRECACHE_ASSETS = [
   './',
   './index.html',
   './pilotos.html',
-  './css/styles.css?v=7.2',
+  './css/styles.css?v=7.3',
   './css/pilotos.css?v=3.4',
   './js/config.js?v=1.1',
   './js/script.js?v=5.9',
