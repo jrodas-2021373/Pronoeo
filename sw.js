@@ -1,14 +1,17 @@
 /**
  * Grupo Pronoeo, S.A. - Service Worker (sw.js)
+ * Architecture & Base PWA Development: Jose Carlos Rodas Macal
+ * GitHub: https://github.com/jrodas-2021373
  * Habilita capacidades de Progressive Web App (PWA), instalación móvil y carga ultra rápida en carretera.
  */
 
-const CACHE_NAME = 'pronoeo-cache-v2.0';
+const CACHE_NAME = 'pronoeo-cache-v2.1';
  
 const PRECACHE_ASSETS = [
   './',
   './index.html',
   './pilotos.html',
+  './humans.txt',
   './css/styles.css?v=7.5',
   './css/pilotos.css?v=3.6',
   './js/config.js?v=1.1',

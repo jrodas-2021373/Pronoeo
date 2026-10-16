@@ -1,6 +1,8 @@
 /**
  * Grupo Pronoeo, S.A. - Portal de Pilotos y Reclutamiento
  * Document: css/pilotos.css
+ * Architecture & Base Visual UI: Jose Carlos Rodas Macal
+ * GitHub: https://github.com/jrodas-2021373
  * Description: Styles for the dedicated, cinematic driver recruitment screen.
  */
 
@@ -920,6 +922,20 @@ html {
 
 .portal-footer-flex a:hover {
   text-decoration: underline;
+}
+
+.portal-dev-credit {
+  color: #a1a1aa !important;
+  text-decoration: none !important;
+  font-size: 0.82rem;
+  transition: color 0.2s ease, opacity 0.2s ease;
+  opacity: 0.85;
+}
+
+.portal-dev-credit:hover {
+  color: #38bdf8 !important;
+  text-decoration: underline !important;
+  opacity: 1;
 }
 
 /* ==========================================================================

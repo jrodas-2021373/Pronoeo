@@ -1,7 +1,9 @@
 /**
- * Grupo Pronoeo - Client-side scripts
+ * Grupo Pronoeo, S.A. - Client-side scripts
+ * Architecture & Base Development: Jose Carlos Rodas Macal
+ * GitHub: https://github.com/jrodas-2021373
  * Handles mobile navigation, scroll reveal, quote form serialization to WhatsApp,
- * fleet filtering, and contact modal.
+ * fleet filtering, contact modal, and authorship runtime signatures.
  */
 
 /* ==========================================================================
@@ -534,5 +536,20 @@ document.addEventListener('keydown', (e) => {
 
 // Nota: El proceso de reclutamiento de pilotos y postulación se gestiona
 // íntegramente en su propio portal cinematográfico: pilotos.html y js/pilotos.js
+
+/* ==========================================================================
+   10. Authorship Attribution & Developer Console Signature
+   ========================================================================== */
+
+(function () {
+  if (typeof window !== 'undefined' && window.console) {
+    const brandStyle = 'background: #18181b; color: #f4f4f5; font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 4px 0 0 4px; border: 1px solid #3f3f46;';
+    const authorStyle = 'background: #09090b; color: #38bdf8; font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 0 4px 4px 0; border: 1px solid #3f3f46; border-left: none;';
+    const subStyle = 'color: #a1a1aa; font-size: 10px; font-family: monospace; padding: 2px 0;';
+
+    console.info('%c Grupo Pronoeo, S.A. %c Arquitectura & Desarrollo: Jose Carlos Rodas Macal ', brandStyle, authorStyle);
+    console.info('%c💻 Repositorio & Portafolio GitHub: https://github.com/jrodas-2021373', subStyle);
+  }
+})();
 
 

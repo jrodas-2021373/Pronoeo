@@ -1,0 +1,18 @@
+/* TEAM */
+Lead Architecture & Full-Stack Development: Jose Carlos Rodas Macal
+Role: Lead Web Architect & Developer
+GitHub: https://github.com/jrodas-2021373
+Repository: https://github.com/jrodas-2021373/Pronoeo
+Contact: jrodas-2021373@kinal.edu.gt
+Location: Guatemala
+
+/* THANKS */
+Client & Organization: Grupo Pronoeo, S.A.
+Operations: Transporte Pesado y Logística Terrestre Centroamericana (DUCA-T)
+
+/* SITE */
+Standards: HTML5, CSS3 Modern (Flexbox, CSS Grid, Custom Properties), Vanilla JavaScript (ES6+), PWA Service Workers
+Security: Structured Data (Schema.org / JSON-LD), HTTPS Strict, Secure Dynamic Lead Dispatcher
+Platform Engine: Custom Cinematic Video Background Engine & Heavy-Duty Recruitment Portal
+Baseline Release: 2026
+Baseline Authorship & Intellectual Property: Jose Carlos Rodas Macal (https://github.com/jrodas-2021373)
