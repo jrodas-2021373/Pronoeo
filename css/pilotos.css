@@ -1528,7 +1528,7 @@ html {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1080px) {
   .portal-header {
     padding: 10px 0;
   }
@@ -1548,6 +1548,14 @@ html {
   .back-text-short {
     display: inline;
   }
+
+  .wa-header-full {
+    display: none;
+  }
+
+  .wa-header-short {
+    display: inline;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1559,24 +1567,28 @@ html {
   .portal-header-flex {
     gap: 8px;
     align-items: center;
+    justify-content: space-between;
   }
 
   .brand {
     gap: 8px;
     min-width: 0;
-    flex-shrink: 1;
+    flex-shrink: 0;
   }
 
   .brand-logo {
-    height: 38px;
+    height: 36px;
     width: auto;
     flex-shrink: 0;
   }
 
   .brand-name {
-    font-size: 0.85rem;
-    letter-spacing: 0.04em;
+    font-size: clamp(0.76rem, 3.2vw, 0.86rem);
+    letter-spacing: 0.03em;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 135px;
   }
 
   .portal-badge-nav {
@@ -1589,8 +1601,8 @@ html {
   }
 
   .btn-portal-back {
-    padding: 7px 11px;
-    font-size: 0.78rem;
+    padding: 6px 10px;
+    font-size: 0.76rem;
     gap: 4px;
     border-radius: 999px;
   }
@@ -1604,8 +1616,8 @@ html {
   }
 
   .btn-portal-wa-header {
-    padding: 7px 11px;
-    font-size: 0.78rem;
+    padding: 6px 10px;
+    font-size: 0.76rem;
     gap: 5px;
     border-radius: 999px;
   }
@@ -1729,28 +1741,33 @@ html {
 
   .brand {
     gap: 6px;
+    flex-shrink: 0;
   }
 
   .brand-logo {
-    height: 34px;
+    height: 32px;
   }
 
   .brand-name {
-    font-size: 0.78rem;
+    font-size: 0.74rem;
     letter-spacing: 0.02em;
+    max-width: 105px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .portal-header-actions {
     gap: 4px;
+    flex-shrink: 0;
   }
 
   .btn-portal-back {
-    padding: 6px 9px;
-    font-size: 0.74rem;
+    padding: 5px 8px;
+    font-size: 0.72rem;
   }
 
   .btn-portal-wa-header {
-    padding: 6px 9px;
-    font-size: 0.74rem;
+    padding: 5px 8px;
+    font-size: 0.72rem;
   }
 }
