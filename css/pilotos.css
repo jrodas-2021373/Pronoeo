@@ -1,6 +1,8 @@
 /**
  * Grupo Pronoeo, S.A. - Portal de Pilotos y Reclutamiento
  * Document: css/pilotos.css
+ * Architecture & Base Visual UI: Jose Carlos Rodas Macal
+ * GitHub: https://github.com/jrodas-2021373
  * Description: Styles for the dedicated, cinematic driver recruitment screen.
  */
 
@@ -81,7 +83,8 @@ body.portal-body {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line);
-  padding: 12px 0;
+  padding: 14px clamp(20px, 3.5vw, 40px);
+  box-sizing: border-box;
   transition: all 0.25s ease;
 }
 
@@ -91,6 +94,8 @@ body.portal-body {
   align-items: center;
   gap: 16px;
   width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
 .brand-name {
@@ -919,6 +924,20 @@ html {
   text-decoration: underline;
 }
 
+.portal-dev-credit {
+  color: #a1a1aa !important;
+  text-decoration: none !important;
+  font-size: 0.82rem;
+  transition: color 0.2s ease, opacity 0.2s ease;
+  opacity: 0.85;
+}
+
+.portal-dev-credit:hover {
+  color: #38bdf8 !important;
+  text-decoration: underline !important;
+  opacity: 1;
+}
+
 /* ==========================================================================
    5.1 Form Feedback Messages
    ========================================================================== */
@@ -1528,9 +1547,10 @@ html {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1080px) {
   .portal-header {
-    padding: 10px 0;
+    padding: 12px clamp(18px, 3.5vw, 32px);
+    box-sizing: border-box;
   }
 
   .portal-header-flex {
@@ -1548,35 +1568,48 @@ html {
   .back-text-short {
     display: inline;
   }
+
+  .wa-header-full {
+    display: none;
+  }
+
+  .wa-header-short {
+    display: inline;
+  }
 }
 
 @media (max-width: 640px) {
   /* Navigation header mobile adaptations - zero overlap, razor-clean fit */
   .portal-header {
-    padding: 8px 0;
+    padding: 10px clamp(16px, 4vw, 24px);
+    box-sizing: border-box;
   }
 
   .portal-header-flex {
     gap: 8px;
     align-items: center;
+    justify-content: space-between;
   }
 
   .brand {
     gap: 8px;
     min-width: 0;
-    flex-shrink: 1;
+    flex-shrink: 0;
   }
 
   .brand-logo {
-    height: 38px;
+    height: 36px;
     width: auto;
     flex-shrink: 0;
   }
 
   .brand-name {
-    font-size: 0.85rem;
-    letter-spacing: 0.04em;
+    font-size: clamp(0.76rem, 3.2vw, 0.86rem);
+    letter-spacing: 0.03em;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 135px;
   }
 
   .portal-badge-nav {
@@ -1589,8 +1622,8 @@ html {
   }
 
   .btn-portal-back {
-    padding: 7px 11px;
-    font-size: 0.78rem;
+    padding: 6px 10px;
+    font-size: 0.76rem;
     gap: 4px;
     border-radius: 999px;
   }
@@ -1604,8 +1637,8 @@ html {
   }
 
   .btn-portal-wa-header {
-    padding: 7px 11px;
-    font-size: 0.78rem;
+    padding: 6px 10px;
+    font-size: 0.76rem;
     gap: 5px;
     border-radius: 999px;
   }
@@ -1723,34 +1756,44 @@ html {
 
 /* Extra compact screens (max-width: 380px) */
 @media (max-width: 380px) {
+  .portal-header {
+    padding: 8px 12px;
+    box-sizing: border-box;
+  }
+
   .portal-header-flex {
     gap: 5px;
   }
 
   .brand {
     gap: 6px;
+    flex-shrink: 0;
   }
 
   .brand-logo {
-    height: 34px;
+    height: 32px;
   }
 
   .brand-name {
-    font-size: 0.78rem;
+    font-size: 0.74rem;
     letter-spacing: 0.02em;
+    max-width: 105px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .portal-header-actions {
     gap: 4px;
+    flex-shrink: 0;
   }
 
   .btn-portal-back {
-    padding: 6px 9px;
-    font-size: 0.74rem;
+    padding: 5px 8px;
+    font-size: 0.72rem;
   }
 
   .btn-portal-wa-header {
-    padding: 6px 9px;
-    font-size: 0.74rem;
+    padding: 5px 8px;
+    font-size: 0.72rem;
   }
 }

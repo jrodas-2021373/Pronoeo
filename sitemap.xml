@@ -4,7 +4,7 @@
      Directorio de rastreo para Google Search Console y motores de búsqueda.
      ========================================================================== -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- 1. Página Principal Corporativa: Servicios, Flota, Aduanas y Cotizaciones -->
+  <!-- 1. Página Principal Corporativa: Servicios, Flota, Tránsitos DUCA-T y Cotizaciones -->
   <url>
     <loc>https://grupopronoeo.com/</loc>
     <lastmod>2026-10-12</lastmod>

@@ -1,6 +1,8 @@
 /**
  * Grupo Pronoeo, S.A. - Portal de Pilotos y Reclutamiento
  * Document: js/pilotos.js
+ * Architecture & Base Development: Jose Carlos Rodas Macal
+ * GitHub: https://github.com/jrodas-2021373
  * Description: Ambient background video crossfader and pilot form serialization.
  */
 
@@ -409,9 +411,9 @@ document.addEventListener('DOMContentLoaded', () => {
               pilotFeedback.style.display = 'block';
               pilotFeedback.innerHTML = `
                 <div class="feedback-badge">✅ Folio de Postulación (${roleTitle}): <strong>${folio}</strong></div>
-                <h4 style="margin: 4px 0 6px; color: #a7f3d0; font-size: 0.98rem;">¡Expediente enviado a Recursos Humanos!</h4>
+                <h4 style="margin: 4px 0 6px; color: #a7f3d0; font-size: 0.98rem;">¡Expediente registrado con éxito!</h4>
                 <p style="margin: 0 0 10px; color: #e2e8f0; font-size: 0.88rem;">
-                  Tus datos han sido registrados en nuestro sistema de selección. Para coordinar tu entrevista técnica de inmediato, envía tu confirmación por WhatsApp a RRHH:
+                  Tus datos han sido registrados en nuestro sistema de selección. Para coordinar tu proceso de inmediato, envía tu confirmación por WhatsApp:
                 </p>
                 <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn-portal-wa" style="padding: 0.72rem 1.4rem; font-size: 0.90rem; text-decoration: none; display: inline-flex;">
                   Contactar a Selección por WhatsApp
@@ -433,7 +435,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="feedback-badge" style="background: rgba(245, 158, 11, 0.25); color: #fef08a;">📋 Folio Registrado (${roleTitle}): <strong>${folio}</strong></div>
               <h4 style="margin: 4px 0 6px; color: #fef08a; font-size: 0.98rem;">Postulación guardada localmente</h4>
               <p style="margin: 0 0 10px; color: #e2e8f0; font-size: 0.88rem;">
-                Tus datos fueron verificados. Envía tu postulación directamente a Recursos Humanos por WhatsApp para agilizar tu ingreso:
+                Tus datos fueron verificados. Envía tu postulación directamente al equipo de selección por WhatsApp para agilizar tu ingreso:
               </p>
               <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn-portal-wa" style="padding: 0.72rem 1.4rem; font-size: 0.90rem; text-decoration: none; display: inline-flex;">
                 Enviar postulación por WhatsApp
@@ -456,10 +458,10 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="feedback-badge">📋 Folio de Postulación (${roleTitle}): <strong>${folio}</strong></div>
               <h4 style="margin: 4px 0 6px; color: #a7f3d0; font-size: 0.98rem;">¡Postulación registrada con éxito!</h4>
               <p style="margin: 0 0 10px; color: #e2e8f0; font-size: 0.88rem;">
-                Tus datos para la vacante de <em>${roleTitle}</em> han sido guardados. Presiona el botón para enviarlos directamente por WhatsApp a Recursos Humanos:
+                Tus datos para la vacante de <em>${roleTitle}</em> han sido guardados. Presiona el botón para enviarlos directamente por WhatsApp:
               </p>
               <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn-portal-wa" style="padding: 0.75rem 1.4rem; font-size: 0.92rem; text-decoration: none; display: inline-flex;">
-                Enviar postulación por WhatsApp a RRHH
+                Enviar postulación por WhatsApp
               </a>
             `;
             pilotFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -482,7 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const msg = buildRecruitmentMessage(role, folio);
       const waUrl = window.PronoeoUtils?.buildWhatsAppUrl('recruitment', msg) || `https://wa.me/?text=${encodeURIComponent(msg)}`;
       window.PronoeoUtils?.trackEvent('contact_whatsapp_recruitment', {
-        event_category: 'WhatsApp_RRHH',
+        event_category: 'WhatsApp_Recruitment',
         role,
         folio
       });
@@ -583,3 +585,17 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedElements.forEach((el) => el.classList.add('is-visible'));
   }
 });
+
+/* ==========================================================================
+   Authorship Attribution & Developer Console Signature
+   ========================================================================== */
+(function () {
+  if (typeof window !== 'undefined' && window.console) {
+    const brandStyle = 'background: #18181b; color: #f4f4f5; font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 4px 0 0 4px; border: 1px solid #3f3f46;';
+    const authorStyle = 'background: #09090b; color: #38bdf8; font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 0 4px 4px 0; border: 1px solid #3f3f46; border-left: none;';
+    const subStyle = 'color: #a1a1aa; font-size: 10px; font-family: monospace; padding: 2px 0;';
+
+    console.info('%c Grupo Pronoeo, S.A. %c Portal de Empleo · Jose Carlos Rodas Macal ', brandStyle, authorStyle);
+    console.info('%c💻 Repositorio & Portafolio GitHub: https://github.com/jrodas-2021373', subStyle);
+  }
+})();

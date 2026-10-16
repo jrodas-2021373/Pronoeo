@@ -1,7 +1,7 @@
 {
   "name": "Grupo Pronoeo, S.A. | Transporte Pesado y Logística",
   "short_name": "Grupo Pronoeo",
-  "description": "Operador logístico de transporte pesado internacional, fletes transfronterizos y aduanas desde México hasta Panamá.",
+  "description": "Operador logístico de transporte pesado internacional, flota propia y tránsitos internacionales DUCA-T desde México hasta Panamá.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
