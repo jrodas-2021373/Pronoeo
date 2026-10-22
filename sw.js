@@ -5,14 +5,14 @@
  * Habilita capacidades de Progressive Web App (PWA), instalación móvil y carga ultra rápida en carretera.
  */
 
-const CACHE_NAME = 'pronoeo-cache-v2.1';
+const CACHE_NAME = 'pronoeo-cache-v2.2';
  
 const PRECACHE_ASSETS = [
   './',
   './index.html',
   './pilotos.html',
   './humans.txt',
-  './css/styles.css?v=7.5',
+  './css/styles.css?v=7.6',
   './css/pilotos.css?v=3.6',
   './js/config.js?v=1.1',
   './js/script.js?v=5.9',
@@ -25,7 +25,11 @@ const PRECACHE_ASSETS = [
   './img/pronoeo-isotype.png?v=1',
   './img/pronoeo-logo.png',
   './img/cabezal-6x4.jpg',
-  './img/terminal-logistica.jpg'
+  './img/terminal-logistica.jpg',
+  './img/carga-acero-perfiles.jpg',
+  './img/carga-cisterna-liquidos.jpg',
+  './img/carga-general-paletizada.jpg',
+  './img/carga-maquinaria-pesada.jpg'
 ];
 
 // Instalación: Pre-cachear activos esenciales y omitir espera
