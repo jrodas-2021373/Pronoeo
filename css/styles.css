@@ -180,11 +180,16 @@ p {
   box-shadow: 0 10px 30px rgba(9, 9, 11, 0.08);
 }
 
-.nav {
+.site-header .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 74px;
+  min-height: 72px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 2.8vw, 44px);
+  gap: clamp(20px, 2.5vw, 48px);
 }
 
 .brand {
@@ -192,23 +197,26 @@ p {
   align-items: center;
   gap: 12px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  flex-shrink: 0;
+  margin-right: clamp(18px, 2.8vw, 44px);
 }
 
 .brand-logo {
   display: block;
-  height: 52px;
+  height: 44px;
   width: auto;
   object-fit: contain;
+  transition: transform 0.2s ease;
 }
 
 .brand-name {
   color: var(--text);
   font-family: "Manrope", sans-serif;
   font-weight: 800;
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
+  font-size: 0.92rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -216,19 +224,22 @@ p {
 .nav-panel {
   display: flex;
   align-items: center;
-  gap: clamp(14px, 1.6vw, 26px);
+  gap: clamp(14px, 1.8vw, 28px);
+  margin-left: auto;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: clamp(10px, 1.2vw, 22px);
+  gap: clamp(10px, 1.15vw, 20px);
   color: var(--muted-2);
-  font-size: clamp(0.86rem, 0.92vw, 0.95rem);
+  font-size: 0.86rem;
+  font-weight: 600;
 }
 
 .nav-links a {
   white-space: nowrap;
+  padding: 6px 3px;
   transition: color 0.2s ease;
 }
 
@@ -243,8 +254,8 @@ p {
   width: 1px;
   height: 16px;
   background: var(--line-strong);
-  margin: 0 2px;
-  opacity: 0.6;
+  margin: 0 4px;
+  opacity: 0.5;
 }
 
 /* Enlace destacado hacia el portal de pilotos (armonioso, sin burbujas invasivas) */
@@ -252,10 +263,12 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 5px 9px;
-  border-radius: 8px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(24, 24, 27, 0.05);
+  border: 1px solid rgba(24, 24, 27, 0.12);
   color: var(--primary) !important;
-  font-size: clamp(0.82rem, 0.88vw, 0.9rem);
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.01em;
   text-decoration: none;
@@ -270,13 +283,14 @@ p {
 }
 
 .nav-link-pilotos:hover {
-  background: rgba(24, 24, 27, 0.08);
-  color: var(--primary-strong) !important;
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff !important;
 }
 
 .nav-link-pilotos:hover .nav-pilotos-arrow {
   transform: translate(2px, -2px);
-  color: var(--primary-strong);
+  color: #ffffff;
 }
 
 .nav-actions {
@@ -288,8 +302,8 @@ p {
 
 /* Proporciones estilizadas de los botones en la barra de navegación */
 .nav-actions .btn {
-  padding: 0.52rem 1.05rem;
-  font-size: 0.84rem;
+  padding: 0.46rem 1rem;
+  font-size: 0.82rem;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -2800,10 +2814,13 @@ p {
 }
 
 /**
- * Navigation Header Breakpoint (max-width: 1140px)
+ * Navigation Header Breakpoint (max-width: 1220px)
  * Activates sleek mobile drawer and hamburger menu to guarantee zero overlap on tablets, iPads, and compact laptops.
  */
-@media (max-width: 1140px) {
+@media (max-width: 1220px) {
+  .brand {
+    margin-right: 0;
+  }
   /* Mobile navigation drawer */
   .nav-panel {
     position: absolute;
